@@ -1,2 +1,2 @@
-# zixianma.github.io
-This is a repo for Zixian Ma's personal website.
+# rahuljain.github.io
+This is a repo for Rahul Jain personal website.
