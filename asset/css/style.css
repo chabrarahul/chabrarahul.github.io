@@ -75,6 +75,49 @@ footer {
 	height: 18vmax;
 }
 
+.round-image {
+	border-radius: 50%;
+	width: 80%;
+	height: 80%;
+}
+
+.section-heading {
+	font-family: poppins-semibold, poppins;
+	color: rgb(94 163 129);
+	font-weight: 600;
+	box-shadow: 0 8px 6px -8px #9ea0a5;
+}
+
+.list-group {
+
+	.publication-list-item-section {
+		position: relative;
+		margin: 11px 0px 11px calc((100% - 980px) * 0.5);
+		display: flex;
+
+		.publication-list-item {
+			background-color: rgba(241, 201, 135, 0.7);
+			border: 1px solid rgba(0, 0, 0, 0.175);
+			border-radius: 3px;
+			box-shadow: 0 1px 3px #00000040;
+			color: saddlebrown;
+			font-weight: 500;
+
+			.publication-list-item-heading {
+				color: saddlebrown;
+				font-weight: 700;
+			}
+
+			.publication-list-item-btn {
+				border-radius: 42%;
+				color: saddlebrown;
+				font-weight: 500;
+			}
+		}
+	}
+
+}
+
 .nav {
 	.nav-custom-border:first-child {
 		border: 0;
@@ -91,7 +134,8 @@ footer {
 			color: rgba(0, 0, 0, 0.5);
 		}
 
-		.nav-custom-color:hover, .nav-custom-color:focus {
+		.nav-custom-color:hover,
+		.nav-custom-color:focus {
 			color: rgba(0, 0, 0);
 			text-decoration: underline;
 		}
