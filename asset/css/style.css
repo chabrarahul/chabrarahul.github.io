@@ -9,7 +9,7 @@ header {
 }
 
 #descrip {
-	margin-top:50px;
+	margin-top: 50px;
 }
 
 
@@ -30,22 +30,23 @@ header {
 	margin-top: 25px;
 }
 
-body input{
-	padding:10px;
+body input {
+	padding: 10px;
 }
 
-canvas{
+canvas {
 	padding: 30px;
 }
 
 body form {
-	padding:0px 50px 0px 10px;
+	padding: 0px 50px 0px 10px;
 }
 
-#carousel{
+#carousel {
 	margin: 20px 100px 20px 100px;
 }
-nav a img{
+
+nav a img {
 	padding: 10px 10px 10px 70px;
 }
 
@@ -53,12 +54,12 @@ nav a img{
 	margin:0 auto;
 } */
 
-.jumbotron{
-	margin:0 px;
+.jumbotron {
+	margin: 0 px;
 }
 
 footer {
-	margin:50px 20px 50px 20px;
+	margin: 50px 20px 50px 20px;
 }
 
 .icon {
@@ -70,6 +71,38 @@ footer {
 }
 
 .home-vid {
-	width:32vmax; 
+	width: 32vmax;
 	height: 18vmax;
+}
+
+.nav {
+	.nav-custom-border:first-child {
+		border: 0;
+	}
+
+	.nav-custom-border {
+		display: inline-block;
+		border-left: 1px solid rgba(0, 0, 0, 0.7);
+		cursor: pointer;
+		height: 90%;
+
+		.nav-custom-color {
+			font-weight: 700;
+			color: rgba(0, 0, 0, 0.5);
+		}
+
+		.nav-custom-color:hover, .nav-custom-color:focus {
+			color: rgba(0, 0, 0);
+			text-decoration: underline;
+		}
+
+	}
+}
+
+.navbar-section-1 {
+	margin-left: 7%;
+
+	.icon {
+		font-size: 1.5rem;
+	}
 }
