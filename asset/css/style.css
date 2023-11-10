@@ -91,7 +91,7 @@ footer {
 	font-family: poppins-semibold, poppins;
 	color: rgb(94 163 129);
 	font-weight: 600;
-	box-shadow: 0 8px 6px -8px #9ea0a5;
+	/*box-shadow: 0 8px 6px -8px #9ea0a5;*/
 }
 
 .list-group {
