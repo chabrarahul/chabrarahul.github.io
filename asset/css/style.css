@@ -93,7 +93,7 @@ footer {
 	font-weight: 600;
 	margin-bottom: 20px;
 	margin-top: 20px;
-	/*box-shadow: 0 8px 6px -8px #9ea0a5;*/
+	box-shadow: 0 8px 6px -8px #9ea0a5;
 }
 
 .list-group {
@@ -125,6 +125,13 @@ footer {
 		}
 	}
 
+	.selected-publication-list-item-section{
+		position: relative;
+		margin: 11px 0px 11px calc((100% - 980px) * 0.5);
+		display: flex;
+		/* height: 200px; */
+		background-color: #F0EAD6;
+	}
 }
 
 .nav {
