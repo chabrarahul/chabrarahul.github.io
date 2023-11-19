@@ -77,8 +77,10 @@ footer {
 
 .round-image {
 	border-radius: 50%;
-	width: 80%;
-	height: 80%;
+	/* width: 80%;
+	height: 80%; */
+	width: 100%;
+    height: auto;
 }
 
 .top-name-style {
