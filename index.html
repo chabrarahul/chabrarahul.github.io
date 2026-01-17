@@ -8,7 +8,7 @@
 
   <title>Rahul Jain</title>
   <meta name="description"
-    content="Rahul Jain — PhD student at Purdue University. Research at the intersection of computer vision, machine learning, and human-computer interaction." />
+    content="Rahul Jain — PhD student at Purdue University. Research at the intersection of computer vision, machine learning, and human-computer interaction, focusing on physically intelligent systems." />
 
   <link rel="stylesheet" href="asset/css/bootstrap.css" />
   <link rel="stylesheet" href="asset/css/all.css" />
@@ -126,6 +126,14 @@
     .nav-link {
       font-weight: 700;
     }
+
+    /* Subtle highlight band */
+    .band {
+      background: rgba(240, 234, 214, 0.55);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    }
   </style>
 </head>
 
@@ -152,8 +160,8 @@
 
         <ul class="nav">
           <li class="nav-item"><a class="nav-link text-dark" href="#top">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="#pillars">Research</a></li>
           <li class="nav-item"><a class="nav-link text-dark" href="projects.html">Projects</a></li>
-          <li class="nav-item"><a class="nav-link text-dark" href="#research">Research</a></li>
           <li class="nav-item"><a class="nav-link text-dark" href="#publications">Publications</a></li>
           <li class="nav-item"><a class="nav-link text-dark" href="#patents">Patents</a></li>
           <li class="nav-item"><a class="nav-link text-dark" href="#service">Service</a></li>
@@ -184,6 +192,7 @@
               <span class="chip">Vision-Language</span>
               <span class="chip">Human-AI Interaction</span>
               <span class="chip">AR/VR</span>
+              <span class="chip">Physical AI</span>
             </div>
 
             <p class="mb-3">
@@ -192,7 +201,8 @@
               <a href="https://scholar.google.com/citations?user=AUPTVF0AAAAJ&hl=en">Prof. Karthik Ramani</a>.
               I also collaborate with <a href="https://www.muratkocaoglu.com">Murat Kocaoglu</a> and
               <a href="https://ryosuzuki.org">Ryo Suzuki</a>.
-              My research lies at the intersection of computer vision, machine learning, and human-computer interaction.
+              My research lies at the intersection of computer vision, machine learning, and human-computer interaction,
+              with a focus on building physically intelligent systems.
             </p>
 
             <div class="d-flex flex-wrap align-items-center">
@@ -213,6 +223,49 @@
           </div>
         </div>
       </div>
+
+      <!-- Research Focus + Pillars (NEW, right after hero) -->
+      <section id="pillars" class="mt-4">
+        <div class="band p-4">
+          <h2 class="text-center" style="font-weight:900; margin-bottom:.75rem;">Research Focus</h2>
+          <p class="text-center muted mb-4" style="font-weight:600;">
+            My research focuses on building physically intelligent systems that understand human interactions,
+            generate actionable guidance, and reason about real-world physical behavior.
+          </p>
+
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="cardx p-3 h-100">
+                <h5 style="font-weight:900;" class="mb-2">Perception &amp; Understanding</h5>
+                <p class="muted mb-2">
+                  How machines observe, structure, and reason about human–object interactions across time and modalities.
+                </p>
+                <a href="projects.html#perception" class="btn btn-sm btn-link pl-0">View work →</a>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <div class="cardx p-3 h-100">
+                <h5 style="font-weight:900;" class="mb-2">Interaction &amp; Generation</h5>
+                <p class="muted mb-2">
+                  Translating machine understanding into interactive systems, guidance, and generative 3D experiences.
+                </p>
+                <a href="projects.html#interaction" class="btn btn-sm btn-link pl-0">View work →</a>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <div class="cardx p-3 h-100">
+                <h5 style="font-weight:900;" class="mb-2">Physical Reasoning &amp; Modeling</h5>
+                <p class="muted mb-2">
+                  Grounding perception and generation in physics, object dynamics, and real-world constraints.
+                </p>
+                <a href="projects.html#physics" class="btn btn-sm btn-link pl-0">View work →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Featured Projects (3 cards) -->
       <div class="row mt-4">
@@ -290,7 +343,7 @@
       </div>
     </section>
 
-    <!-- Research Areas -->
+    <!-- Research Areas (kept, but now it complements pillars) -->
     <section id="research" class="my-5">
       <h2 class="text-center section-heading">Research Areas</h2>
 
@@ -354,7 +407,9 @@
       <div class="cardx p-4 mb-4">
         <div class="row">
           <div class="col-md-4 mb-3 mb-md-0">
-            <img class="pub-thumb" src="asset/pdf/annotateXR.png" alt="AnnotateXR thumbnail" />
+            <!-- NOTE: your current code had src="asset/pdf/annotateXR.png" which is likely wrong.
+                 If the image is actually in asset/image/, fix the path accordingly. -->
+            <img class="pub-thumb" src="asset/image/annotateXR.png" alt="AnnotateXR thumbnail" />
           </div>
           <div class="col-md-8">
             <div class="d-flex align-items-center mb-2">
@@ -377,7 +432,7 @@
       <div class="cardx p-4 mb-4">
         <div class="row">
           <div class="col-md-4 mb-3 mb-md-0">
-            <img class="pub-thumb" src="asset/pdf/tt.png" alt="AvaTTAR thumbnail" />
+            <img class="pub-thumb" src="asset/image/tt.png" alt="AvaTTAR thumbnail" />
           </div>
           <div class="col-md-8">
             <div class="d-flex align-items-center mb-2">
@@ -430,15 +485,6 @@
         <p class="muted mb-0">
           Patent disclosures in progress. Details available upon request.
         </p>
-
-        <!-- If you have patents, replace the text above with list items like this:
-        <div class="mt-3">
-          <div class="p-3" style="border:1px solid rgba(0,0,0,0.08); border-radius:14px;">
-            <b>Patent Title</b> — Status (Filed/Pending/Granted), Year<br />
-            <span class="muted">Co-inventors: ... · Application/Publication #: ...</span>
-          </div>
-        </div>
-        -->
       </div>
     </section>
 
