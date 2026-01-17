@@ -6,14 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <title>Projects — Rahul Jain</title>
+  <title>Rahul Jain</title>
   <meta name="description"
-    content="Projects by Rahul Jain — Human-AI Interaction, AR/VR, and Computer Vision systems." />
+    content="Rahul Jain — PhD student at Purdue University. Research at the intersection of computer vision, machine learning, and human-computer interaction." />
 
   <link rel="stylesheet" href="asset/css/bootstrap.css" />
   <link rel="stylesheet" href="asset/css/all.css" />
   <link rel="stylesheet" href="asset/css/style.css" />
 
+  <!-- Small inline styling upgrades so you can paste-and-go -->
   <style>
     :root {
       --bg: rgb(255, 252, 244);
@@ -45,9 +46,8 @@
       border-bottom: 1px solid var(--border);
     }
 
-    .page-hero {
+    .hero {
       background: var(--header);
-      padding: 3rem 0 2rem;
     }
 
     .hero-card {
@@ -57,6 +57,19 @@
       box-shadow: var(--shadow);
       padding: 1.25rem;
       backdrop-filter: blur(6px);
+    }
+
+    .avatar {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 999px;
+      border: 4px solid rgba(255, 255, 255, 0.75);
+      box-shadow: var(--shadow);
+    }
+
+    .muted {
+      color: var(--muted);
     }
 
     .chip {
@@ -84,6 +97,13 @@
       box-shadow: var(--shadow);
     }
 
+    .pub-thumb {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      object-fit: cover;
+    }
+
     .badge-venue {
       font-size: .85rem;
       border: 1px solid var(--border);
@@ -93,18 +113,6 @@
       border-radius: 999px;
       font-weight: 800;
       display: inline-block;
-    }
-
-    .thumb {
-      width: 100%;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      object-fit: cover;
-      max-height: 180px;
-    }
-
-    .muted {
-      color: var(--muted);
     }
 
     .footer {
@@ -126,181 +134,265 @@
   <header class="site-header sticky-top">
     <nav class="navbar navbar-light">
       <div class="container d-flex align-items-center justify-content-between">
-        <a class="navbar-brand text-dark" href="index.html" style="font-weight:900;">Rahul Jain</a>
+        <div class="d-flex align-items-center">
+          <a class="text-dark mr-2" href="https://www.linkedin.com/in/rahul-purdue" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a class="text-dark mr-2" href="https://scholar.google.com/citations?user=n8woqvsAAAAJ&hl=en"
+            aria-label="Google Scholar">
+            <i class="fas fa-graduation-cap"></i>
+          </a>
+          <a class="text-dark mr-2" href="https://github.com/chabrarahul" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a class="text-dark" href="https://twitter.com/rahuljain151996" aria-label="Twitter/X">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
 
         <ul class="nav">
-          <li class="nav-item"><a class="nav-link text-dark" href="index.html#top">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="#top">Home</a></li>
           <li class="nav-item"><a class="nav-link text-dark" href="projects.html">Projects</a></li>
-          <li class="nav-item"><a class="nav-link text-dark" href="index.html#research">Research</a></li>
-          <li class="nav-item"><a class="nav-link text-dark" href="index.html#publications">Publications</a></li>
-          <li class="nav-item"><a class="nav-link text-dark" href="index.html#patents">Patents</a></li>
-          <li class="nav-item"><a class="nav-link text-dark" href="index.html#service">Service</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="#research">Research</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="#publications">Publications</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="#patents">Patents</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="#service">Service</a></li>
           <li class="nav-item"><a class="nav-link text-dark" href="asset/pdf/Resume_Rahul_final.pdf">CV</a></li>
-          <li class="nav-item"><a class="nav-link text-dark" href="index.html#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
   </header>
 
-  <!-- Page Hero -->
-  <section class="page-hero" id="top">
+  <!-- Hero -->
+  <section class="hero py-5" id="top">
     <div class="container">
-      <div class="hero-card">
-        <div class="row align-items-center">
-          <div class="col-md-8">
-            <h1 class="mb-1" style="font-weight: 900;">Projects</h1>
-            <p class="muted mb-3">
-              A curated set of research systems, datasets, and prototypes across Human–AI Interaction, AR/VR, and
-              Computer Vision.
-            </p>
-            <div>
-              <span class="chip">Human–AI Interaction</span>
-              <span class="chip">AR/VR</span>
+      <div class="row align-items-center">
+        <div class="col-md-3 text-center mb-3 mb-md-0">
+          <img class="avatar" src="asset/image/new_cover_photo.jpg" alt="Rahul Jain headshot" />
+        </div>
+
+        <div class="col-md-9">
+          <div class="hero-card">
+            <h1 class="mb-1" style="font-weight: 900;">Rahul Jain</h1>
+            <div class="muted mb-2" style="font-weight: 700;">
+              PhD Student, Electrical &amp; Computer Engineering — Purdue University
+            </div>
+
+            <div class="mb-3">
               <span class="chip">Computer Vision</span>
-              <span class="chip">Datasets</span>
+              <span class="chip">Vision-Language</span>
+              <span class="chip">Human-AI Interaction</span>
+              <span class="chip">AR/VR</span>
+            </div>
+
+            <p class="mb-3">
+              Hello! I’m a third-year PhD student at <a href="https://www.purdue.edu/">Purdue University</a> and a member
+              of the <a href="https://engineering.purdue.edu/cdesign/wp/">Convergence Design Lab</a>, advised by
+              <a href="https://scholar.google.com/citations?user=AUPTVF0AAAAJ&hl=en">Prof. Karthik Ramani</a>.
+              I also collaborate with <a href="https://www.muratkocaoglu.com">Murat Kocaoglu</a> and
+              <a href="https://ryosuzuki.org">Ryo Suzuki</a>.
+              My research lies at the intersection of computer vision, machine learning, and human-computer interaction.
+            </p>
+
+            <div class="d-flex flex-wrap align-items-center">
+              <a class="btn btn-dark mr-2 mb-2" href="asset/pdf/Resume_Rahul_final.pdf">
+                <i class="fas fa-file mr-1"></i> CV
+              </a>
+              <a class="btn btn-outline-dark mr-2 mb-2" href="mailto:jain348@purdue.edu">
+                <i class="fas fa-envelope mr-1"></i> jain348@purdue.edu
+              </a>
+              <a class="btn btn-outline-dark mr-2 mb-2"
+                href="https://scholar.google.com/citations?user=n8woqvsAAAAJ&hl=en">
+                <i class="fas fa-graduation-cap mr-1"></i> Scholar
+              </a>
+              <a class="btn btn-outline-dark mb-2" href="projects.html">
+                <i class="fas fa-th-large mr-1"></i> Projects
+              </a>
             </div>
           </div>
-          <div class="col-md-4 text-md-right mt-3 mt-md-0">
-            <a class="btn btn-dark mr-2" href="asset/pdf/Resume_Rahul_final.pdf">
-              <i class="fas fa-file mr-1"></i> CV
-            </a>
-            <a class="btn btn-outline-dark" href="mailto:jain348@purdue.edu">
-              <i class="fas fa-envelope mr-1"></i> Email
-            </a>
-          </div>
-        </div>
-
-        <hr style="border-color: rgba(0,0,0,0.08);" />
-
-        <!-- Quick category nav -->
-        <div class="d-flex flex-wrap">
-          <a class="btn btn-sm btn-outline-dark mr-2 mb-2" href="#hai">Human–AI Interaction</a>
-          <a class="btn btn-sm btn-outline-dark mr-2 mb-2" href="#arvr">AR/VR &amp; Embodied Learning</a>
-          <a class="btn btn-sm btn-outline-dark mr-2 mb-2" href="#cv">Computer Vision Systems</a>
-          <a class="btn btn-sm btn-outline-dark mb-2" href="#datasets">Datasets</a>
         </div>
       </div>
+
+      <!-- Featured Projects (3 cards) -->
+      <div class="row mt-4">
+        <div class="col-md-4 mb-3">
+          <div class="cardx p-3 h-100">
+            <div class="badge-venue mb-2">CHI 2025</div>
+            <h5 style="font-weight:900;">CARING-AI</h5>
+            <p class="muted mb-2">Context-aware AR instruction authoring via Generative AI.</p>
+            <a href="https://arxiv.org/pdf/2501.16557" class="btn btn-sm btn-outline-dark mr-2">PDF</a>
+            <a href="projects.html#hai" class="btn btn-sm btn-link pl-0">More →</a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="cardx p-3 h-100">
+            <div class="badge-venue mb-2">UIST 2023</div>
+            <h5 style="font-weight:900;">Ubi-TOUCH</h5>
+            <p class="muted mb-2">Tangible object utilization through consistent hand-object interaction in AR.</p>
+            <a href="asset/pdf/UIST_2023.pdf" class="btn btn-sm btn-outline-dark mr-2">PDF</a>
+            <a href="projects.html#arvr" class="btn btn-sm btn-link pl-0">More →</a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="cardx p-3 h-100">
+            <div class="badge-venue mb-2">JCISE 2024</div>
+            <h5 style="font-weight:900;">AnnotateXR</h5>
+            <p class="muted mb-2">XR workflow for automating data annotation for CV applications.</p>
+            <a href="asset/pdf/jcise.pdf" class="btn btn-sm btn-outline-dark mr-2">PDF</a>
+            <a href="projects.html#cv" class="btn btn-sm btn-link pl-0">More →</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <main class="container my-5">
+  <main class="container">
 
-    <!-- Human–AI Interaction -->
-    <section id="hai" class="mb-5">
-      <h2 class="section-heading">Human–AI Interaction</h2>
+    <!-- News -->
+    <section id="news" class="my-5">
+      <h2 class="text-center section-heading">News</h2>
+      <div class="cardx p-4">
+        <ul class="mb-0">
+          <li class="mb-2">
+            <span class="badge-venue mr-2">May 2025</span>
+            Started as a Research Intern at <a href="https://www.linkedin.com/company/primevideoamazonstudios/">Prime Video
+              &amp; Studios CoreTech</a> (Seattle), working on large multimodal models.
+          </li>
+          <li class="mb-2">
+            <span class="badge-venue mr-2">Jan 2025</span>
+            Three papers accepted to <a href="https://chi2025.acm.org">CHI 2025</a>.
+          </li>
+          <li class="mb-2">
+            <span class="badge-venue mr-2">Dec 2024</span>
+            One paper accepted to <a href="https://www.computer.org/csdl/journal/tg">IEEE TVCG</a>.
+          </li>
+          <li class="mb-2">
+            <span class="badge-venue mr-2">Jul 2024</span>
+            <em>AnnotateXR</em> accepted to JCISE 2024.
+          </li>
+          <li class="mb-2">
+            <span class="badge-venue mr-2">Jul 2024</span>
+            <em>AvaTTAR</em> accepted to UIST 2024.
+          </li>
+          <li class="mb-2">
+            <span class="badge-venue mr-2">Jan 2024</span>
+            Started a Computer Vision + HCI research internship at
+            <a href="https://www.fujitsu.com/us/about/businesspolicy/tech/rd/">Fujitsu Research of America</a>.
+          </li>
+          <li class="mb-0">
+            <span class="badge-venue mr-2">2023</span>
+            <em>Ubi-TOUCH</em> accepted to UIST 2023; <em>Interacting Objects</em> accepted to RA-L 2023 (presented at ICRA
+            2024).
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Research Areas -->
+    <section id="research" class="my-5">
+      <h2 class="text-center section-heading">Research Areas</h2>
+
+      <div class="mx-2 mx-md-5">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <div class="cardx p-3 h-100">
+              <h5 style="font-weight:900;" class="mb-2">Human–AI Interaction</h5>
+              <p class="muted mb-2">Interaction techniques and systems that make AI usable, steerable, and trustworthy.</p>
+              <a href="projects.html#hai" class="btn btn-sm btn-link pl-0">View projects →</a>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <div class="cardx p-3 h-100">
+              <h5 style="font-weight:900;" class="mb-2">AR/VR &amp; Embodied Learning</h5>
+              <p class="muted mb-2">Augmented reality interfaces for training, instruction, and skill development.</p>
+              <a href="projects.html#arvr" class="btn btn-sm btn-link pl-0">View projects →</a>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <div class="cardx p-3 h-100">
+              <h5 style="font-weight:900;" class="mb-2">Computer Vision Systems</h5>
+              <p class="muted mb-2">Vision pipelines + datasets that connect perception to real workflows.</p>
+              <a href="projects.html#cv" class="btn btn-sm btn-link pl-0">View projects →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications" class="my-5">
+      <h2 class="text-center section-heading">Selected Publications</h2>
 
       <div class="cardx p-4 mb-4">
         <div class="row">
           <div class="col-md-4 mb-3 mb-md-0">
-            <img class="thumb" src="asset/image/caring.png" alt="CARING-AI thumbnail" />
+            <img class="pub-thumb" src="asset/image/caring.png" alt="CARING-AI thumbnail" />
           </div>
           <div class="col-md-8">
-            <div class="badge-venue mb-2">CHI 2025</div>
-            <h4 style="font-weight: 900;" class="mb-2">CARING-AI</h4>
+            <div class="d-flex align-items-center mb-2">
+              <span class="badge-venue mr-2">CHI 2025</span>
+              <h3 class="mb-0" style="font-weight: 900;">CARING-AI</h3>
+            </div>
             <p class="mb-2">
-              Towards authoring context-aware augmented reality instruction through generative AI.
+              CARING-AI: Towards Authoring Context-aware Augmented Reality Instruction through Generative AI.
             </p>
             <p class="muted mb-3">
-              Focus: Generative authoring pipelines, contextual instruction generation, interactive AR workflows.
+              Jingyu Shi*, <strong>Rahul Jain*</strong>, Seung-gun Chi, Hyung-jun Doh, Hyung-gun Chi, Alex Quinn, Karthik
+              Ramani
             </p>
             <a class="btn btn-sm btn-outline-dark" href="https://arxiv.org/pdf/2501.16557">
-              <i class="fas fa-file-pdf mr-1"></i> Paper (PDF)
+              <i class="fas fa-file-pdf mr-1"></i> PDF
             </a>
           </div>
         </div>
       </div>
-
-      <div class="cardx p-4">
-        <div class="row">
-          <div class="col-md-4 mb-3 mb-md-0">
-            <!-- Replace with a real image if you have one -->
-            <img class="thumb" src="asset/image/new_cover_photo.jpg" alt="Human-Generative-AI Interactions thumbnail" />
-          </div>
-          <div class="col-md-8">
-            <div class="badge-venue mb-2">Under Review</div>
-            <h4 style="font-weight: 900;" class="mb-2">Human-Generative-AI Interactions (Survey &amp; Taxonomy)</h4>
-            <p class="mb-2">
-              An HCI-centric survey and taxonomy of how humans interact with generative AI systems.
-            </p>
-            <p class="muted mb-3">
-              Focus: interaction design space, evaluation axes, and practical guidance for human-centered GenAI.
-            </p>
-            <a class="btn btn-sm btn-outline-dark" href="https://arxiv.org/pdf/2310.07127.pdf">
-              <i class="fas fa-file-pdf mr-1"></i> Paper (PDF)
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- AR/VR & Embodied Learning -->
-    <section id="arvr" class="mb-5">
-      <h2 class="section-heading">AR/VR &amp; Embodied Learning</h2>
 
       <div class="cardx p-4 mb-4">
         <div class="row">
           <div class="col-md-4 mb-3 mb-md-0">
-            <img class="thumb" src="asset/pdf/tt.png" alt="AvaTTAR thumbnail" />
+            <img class="pub-thumb" src="asset/pdf/annotateXR.png" alt="AnnotateXR thumbnail" />
           </div>
           <div class="col-md-8">
-            <div class="badge-venue mb-2">UIST 2024</div>
-            <h4 style="font-weight: 900;" class="mb-2">AvaTTAR</h4>
+            <div class="d-flex align-items-center mb-2">
+              <span class="badge-venue mr-2">JCISE 2024</span>
+              <h3 class="mb-0" style="font-weight: 900;">AnnotateXR</h3>
+            </div>
             <p class="mb-2">
-              Table tennis stroke training with on-body and detached visualization in augmented reality.
+              An Extended Reality Workflow for Automating Data Annotation to Support Computer Vision Applications.
             </p>
             <p class="muted mb-3">
-              Focus: skill training, visualization design, embodied feedback, AR coaching systems.
-            </p>
-            <a class="btn btn-sm btn-outline-dark" href="asset/pdf/tt.pdf">
-              <i class="fas fa-file-pdf mr-1"></i> Paper (PDF)
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="cardx p-4">
-        <div class="row">
-          <div class="col-md-4 mb-3 mb-md-0">
-            <!-- Replace with a better Ubi-TOUCH thumbnail if you have one -->
-            <img class="thumb" src="asset/image/new_cover_photo.jpg" alt="Ubi-TOUCH thumbnail" />
-          </div>
-          <div class="col-md-8">
-            <div class="badge-venue mb-2">UIST 2023</div>
-            <h4 style="font-weight: 900;" class="mb-2">Ubi-TOUCH</h4>
-            <p class="mb-2">
-              Ubiquitous tangible object utilization through consistent hand-object interaction in augmented reality.
-            </p>
-            <p class="muted mb-3">
-              Focus: tangible proxies, hand-object interaction consistency, AR interaction techniques.
-            </p>
-            <a class="btn btn-sm btn-outline-dark" href="asset/pdf/UIST_2023.pdf">
-              <i class="fas fa-file-pdf mr-1"></i> Paper (PDF)
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Computer Vision Systems -->
-    <section id="cv" class="mb-5">
-      <h2 class="section-heading">Computer Vision Systems</h2>
-
-      <div class="cardx p-4 mb-4">
-        <div class="row">
-          <div class="col-md-4 mb-3 mb-md-0">
-            <img class="thumb" src="asset/pdf/annotateXR.png" alt="AnnotateXR thumbnail" />
-          </div>
-          <div class="col-md-8">
-            <div class="badge-venue mb-2">JCISE 2024</div>
-            <h4 style="font-weight: 900;" class="mb-2">AnnotateXR</h4>
-            <p class="mb-2">
-              An extended reality workflow for automating data annotation to support computer vision applications.
-            </p>
-            <p class="muted mb-3">
-              Focus: data pipelines, annotation automation, bridging real workflows with CV training needs.
+              Subramanian Chidambaram*, <strong>Rahul Jain*</strong>, Sai Swarup Reddy, Asim Unmesh, Karthik Ramani
             </p>
             <a class="btn btn-sm btn-outline-dark" href="asset/pdf/jcise.pdf">
-              <i class="fas fa-file-pdf mr-1"></i> Paper (PDF)
+              <i class="fas fa-file-pdf mr-1"></i> PDF
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cardx p-4 mb-4">
+        <div class="row">
+          <div class="col-md-4 mb-3 mb-md-0">
+            <img class="pub-thumb" src="asset/pdf/tt.png" alt="AvaTTAR thumbnail" />
+          </div>
+          <div class="col-md-8">
+            <div class="d-flex align-items-center mb-2">
+              <span class="badge-venue mr-2">UIST 2024</span>
+              <h3 class="mb-0" style="font-weight: 900;">AvaTTAR</h3>
+            </div>
+            <p class="mb-2">
+              Table Tennis Stroke Training with On-body and Detached Visualization in Augmented Reality.
+            </p>
+            <p class="muted mb-3">
+              Dizhi Ma*, Xiyun Hu*, Jingyu Shi, Mayank Patel, <strong>Rahul Jain*</strong>, Ziyi Liu, Zhengzhe Zhu,
+              Karthik Ramani
+            </p>
+            <a class="btn btn-sm btn-outline-dark" href="asset/pdf/tt.pdf">
+              <i class="fas fa-file-pdf mr-1"></i> PDF
             </a>
           </div>
         </div>
@@ -309,44 +401,76 @@
       <div class="cardx p-4">
         <div class="row">
           <div class="col-md-4 mb-3 mb-md-0">
-            <img class="thumb" src="asset/image/RA-L_2023.png" alt="Interacting Objects thumbnail" />
+            <img class="pub-thumb" src="asset/image/RA-L_2023.png" alt="Interacting Objects thumbnail" />
           </div>
           <div class="col-md-8">
-            <div class="badge-venue mb-2">RA-L 2023 / ICRA 2024</div>
-            <h4 style="font-weight: 900;" class="mb-2">Interacting Objects</h4>
+            <div class="d-flex align-items-center mb-2">
+              <span class="badge-venue mr-2">RA-L 2023 / ICRA 2024</span>
+              <h3 class="mb-0" style="font-weight: 900;">Interacting Objects</h3>
+            </div>
             <p class="mb-2">
               A dataset of object-object interactions for richer dynamic scene representations.
             </p>
             <p class="muted mb-3">
-              Focus: interaction-centric representations, datasets for physical scene understanding.
+              Asim Unmesh, <strong>Rahul Jain*</strong>, Jingyu Shi, VK Chaitanya, Hyung-Gun Chi, Subramanian Chidambaram,
+              Alexander Quinn, Karthik Ramani
             </p>
             <a class="btn btn-sm btn-outline-dark" href="asset/pdf/RA_L_2023.pdf">
-              <i class="fas fa-file-pdf mr-1"></i> Paper (PDF)
+              <i class="fas fa-file-pdf mr-1"></i> PDF
             </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Datasets (optional bucket, still looks professional) -->
-    <section id="datasets" class="mb-5">
-      <h2 class="section-heading">Datasets</h2>
-
+    <!-- Patents -->
+    <section id="patents" class="my-5">
+      <h2 class="text-center section-heading">Patents</h2>
       <div class="cardx p-4">
         <p class="muted mb-0">
-          If you have dedicated dataset pages (GitHub / project sites), list them here as separate cards. This section is
-          optional, but it helps industry visitors quickly understand your “artifact output.”
+          Patent disclosures in progress. Details available upon request.
         </p>
 
-        <!-- Template card for a dataset; copy/paste if needed
-        <div class="mt-3 p-3" style="border:1px solid rgba(0,0,0,0.08); border-radius:14px;">
-          <div class="badge-venue mb-2">Dataset</div>
-          <h5 style="font-weight:900;">Dataset Name</h5>
-          <p class="muted mb-2">One line on what it contains and why it matters.</p>
-          <a class="btn btn-sm btn-outline-dark" href="#">GitHub</a>
-          <a class="btn btn-sm btn-outline-dark" href="#">Project Page</a>
+        <!-- If you have patents, replace the text above with list items like this:
+        <div class="mt-3">
+          <div class="p-3" style="border:1px solid rgba(0,0,0,0.08); border-radius:14px;">
+            <b>Patent Title</b> — Status (Filed/Pending/Granted), Year<br />
+            <span class="muted">Co-inventors: ... · Application/Publication #: ...</span>
+          </div>
         </div>
         -->
+      </div>
+    </section>
+
+    <!-- Service -->
+    <section id="service" class="my-5">
+      <h2 class="text-center section-heading">Academic Service</h2>
+      <div class="cardx p-4">
+        <ul class="mb-0">
+          <li class="mb-2">Mentoring: 1 graduate student (Hyungjun Doh).</li>
+          <li class="mb-2">Mentored 2 undergraduate students (Hyungjun Doh, Heesoo Kim).</li>
+          <li class="mb-2">
+            Graduate mentor, Summer Undergraduate Research Fellowship (SURF)
+            <a href="https://engineering.purdue.edu/Engr/Research/EURO/students/about-SURF">[2021, 2023]</a>.
+          </li>
+          <li class="mb-0">
+            Reviewer: CHI 2025/2024, IEEE VR 2025/2024, CHI 2024 LBW, CSCW 2024, DIS 2024, RA-L, TVCG.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="my-5">
+      <h2 class="text-center section-heading">Contact</h2>
+      <div class="cardx p-4 text-center">
+        <p class="mb-2"><b>Email:</b> <a href="mailto:jain348@purdue.edu">jain348@purdue.edu</a></p>
+        <p class="mb-0">
+          <a class="mr-3" href="https://www.linkedin.com/in/rahul-purdue">LinkedIn</a>
+          <a class="mr-3" href="https://scholar.google.com/citations?user=n8woqvsAAAAJ&hl=en">Google Scholar</a>
+          <a class="mr-3" href="https://github.com/chabrarahul">GitHub</a>
+          <a href="https://twitter.com/rahuljain151996">Twitter/X</a>
+        </p>
       </div>
     </section>
 
@@ -358,7 +482,7 @@
   <footer class="footer">
     <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
       <div>© <span id="year"></span> Rahul Jain</div>
-      <div class="mt-2 mt-md-0 muted">Projects page</div>
+      <div class="mt-2 mt-md-0 muted">Last updated: Jan 2026</div>
     </div>
   </footer>
 
