@@ -16,6 +16,52 @@
 
   <!-- Small inline styling upgrades so you can paste-and-go -->
   <style>
+    :root{
+      --bg: #FFF9F0;
+      --header: #EFE6D6;
+      --card: #FFFFFF;
+      --ink: #121212;
+      --muted: #5A5A5A;
+      --border: rgba(0,0,0,0.08);
+      --shadow: 0 10px 24px rgba(0,0,0,0.06);
+      --radius: 14px;
+    
+      --accent: #0F766E;
+      --accentHover: #115E59;
+    }
+    
+    /* links/buttons accent */
+    a { color: var(--accent); }
+    a:hover { color: var(--accentHover); }
+    .btn-dark { background: var(--ink); border-color: var(--ink); }
+    .btn-outline-dark:hover { background: var(--ink); color: white; }
+    
+    /* Animated background layer */
+    .bg-anim{
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background: radial-gradient(700px 500px at 10% 10%, rgba(15,118,110,0.12), transparent 60%),
+                  radial-gradient(700px 500px at 90% 20%, rgba(124,45,18,0.08), transparent 60%),
+                  radial-gradient(900px 650px at 30% 90%, rgba(37,99,235,0.07), transparent 60%),
+                  linear-gradient(180deg, rgba(255,255,255,0.0), rgba(255,255,255,0.35));
+      filter: saturate(1.05);
+      animation: bgFloat 16s ease-in-out infinite alternate;
+      transform: translateZ(0);
+    }
+    
+    /* Gentle motion */
+    @keyframes bgFloat{
+      0%   { transform: scale(1) translate(0px, 0px); }
+      50%  { transform: scale(1.03) translate(-10px, 8px); }
+      100% { transform: scale(1.02) translate(10px, -6px); }
+    }
+    
+    /* Respect accessibility */
+    @media (prefers-reduced-motion: reduce){
+      .bg-anim{ animation: none; }
+    }
+
     :root {
       --bg: rgb(255, 252, 244);
       --header: rgb(240, 234, 214);
