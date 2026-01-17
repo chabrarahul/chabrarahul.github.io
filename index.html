@@ -1,380 +1,364 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 
 <head>
-	<meta charset='UTF-8'>
-	<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
-	<title>Rahul Jain</title>
-	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
-	<link rel='stylesheet' href='asset/css/bootstrap.css'>
-	<link rel='stylesheet' href='asset/css/all.css'>
-	<link rel='stylesheet' href='asset/css/style.css'>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>Rahul Jain</title>
+  <meta name="description"
+    content="Rahul Jain — PhD student at Purdue University. Research at the intersection of computer vision, machine learning, and human-computer interaction." />
+
+  <link rel="stylesheet" href="asset/css/bootstrap.css" />
+  <link rel="stylesheet" href="asset/css/all.css" />
+  <link rel="stylesheet" href="asset/css/style.css" />
+
+  <!-- Small, safe upgrades without needing to touch your CSS file -->
+  <style>
+    :root {
+      --bg: rgb(255, 252, 244);
+      --header: rgb(240, 234, 214);
+      --ink: #111;
+      --muted: #555;
+      --card: #fff;
+      --border: rgba(0, 0, 0, 0.08);
+      --shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+      --radius: 14px;
+    }
+
+    body { background: var(--bg); color: var(--ink); }
+    a { text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .site-header { background: var(--header); border-bottom: 1px solid var(--border); }
+    .navbar { padding-top: .75rem; padding-bottom: .75rem; }
+    .nav-link { font-weight: 600; }
+
+    .hero { background: var(--header); }
+    .hero-card {
+      background: rgba(255, 255, 255, 0.55);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.25rem;
+      backdrop-filter: blur(6px);
+    }
+
+    .avatar {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 999px;
+      border: 4px solid rgba(255, 255, 255, 0.7);
+      box-shadow: var(--shadow);
+    }
+
+    .muted { color: var(--muted); }
+    .chip {
+      display: inline-block;
+      padding: .25rem .6rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.7);
+      font-size: .9rem;
+      margin-right: .4rem;
+      margin-bottom: .4rem;
+    }
+
+    .section-heading { margin-top: 2.25rem; margin-bottom: 1rem; font-weight: 800; }
+    .cardx {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .pub-thumb {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .badge-venue {
+      font-size: .85rem;
+      border: 1px solid var(--border);
+      background: rgba(240, 234, 214, 0.7);
+      color: #222;
+      padding: .25rem .5rem;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    .footer {
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      padding: 1.25rem 0;
+      margin-top: 2rem;
+      font-size: .95rem;
+    }
+  </style>
 </head>
 
-<body style="background-color: rgb(255,252,244);">
-	<header style="background-color: rgb(240, 234, 214);">
-		<nav class='navbar navbar-light sticky-top row mt-2 mr-0'>
+<body>
+  <!-- Header / Nav -->
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-light">
+      <div class="container d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center">
+          <a class="text-dark mr-2" href="https://www.linkedin.com/in/rahul-purdue" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a class="text-dark mr-2" href="https://scholar.google.com/citations?user=n8woqvsAAAAJ&hl=en"
+            aria-label="Google Scholar">
+            <i class="fas fa-graduation-cap"></i>
+          </a>
+          <a class="text-dark mr-2" href="https://github.com/chabrarahul" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a class="text-dark" href="https://twitter.com/rahuljain151996" aria-label="Twitter/X">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
 
-			<div class="col-md-5 ml-4 navbar-section-1">
-				<span class="icon"><a class="text-dark"
-						href="https://www.linkedin.com/in/rahul-purdue?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i
-							class="fab fa-linkedin mx-2"></i></a></span>
-				<span class="icon"><a class="text-dark"
-						href="https://scholar.google.com/citations?user=n8woqvsAAAAJ&hl=en"><i
-							class="fas fa-graduation-cap mx-2"></i></a></span>
-				<span class="icon"><a class="text-dark" href="https://github.com/chabrarahul"><i
-							class="fab fa-github mx-2"></i></a></span>
-				<span class="icon"><a class="text-dark" href="https://twitter.com/rahuljain151996"><i
-							class="fab fa-twitter mx-2"></i></a></span>
-			</div>
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link text-dark" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="#news">News</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="#publications">Publications</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="#service">Service</a></li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="asset/pdf/Resume_Rahul_final.pdf">CV</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-			<ul class="nav justify-content-center justify-content-lg-end col">
-				<li class="nav-item nav-custom-border">
-					<a class="nav-link nav-custom-color" href="asset/pdf/Resume_Rahul_final.pdf">CV</a>
-				</li>
-				<li class="nav-item nav-custom-border">
-					<a class="nav-link nav-custom-color" href="#research">Research</a>
-				</li>
-				<li class="nav-item nav-custom-border">
-					<a class="nav-link nav-custom-color" href="#preprint">Publications</a>
-				</li>
-				<li class="nav-item nav-custom-border">
-					<a class="nav-link nav-custom-color" href="#Services">Academic Services</a>
-				</li>
-			</ul>
-		</nav>
-	</header>
-	<section id="top" style="background-color: #F0EAD6;">
-		<div class='container pt-5'>
-			<div class="row">
-				<div class="col-3">
-					<img class="img-responsiveness round-image" src="asset/image/new_cover_photo.jpg" alt="headshot">
-				</div>
-				<div class="col-9">
-					<div class="top-name-style mb-2">
-						<h4>Ph.D. Student @ Purdue University</h4>
-						<div>
-							<p class="pb-2">jain348 [at] purdue.edu</p>
-						</div>
-					</div>
-					<p>
+  <!-- Hero -->
+  <section class="hero py-5" id="top">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-3 text-center mb-3 mb-md-0">
+          <img class="avatar" src="asset/image/new_cover_photo.jpg" alt="Rahul Jain headshot" />
+        </div>
 
-						Hello! I am <strong class="h5 font-weight-bold">Rahul Jain</strong>, a third-year PhD student in
-						Electrical
-						and Computer Engineering at <a class="" href="https://www.purdue.edu"> Purdue
-							University</a>. I am part of <a class="" href="https://engineering.purdue.edu/cdesign/wp/">
-							Convergence Design Lab</a>, working with
-						<a class="" href="https://scholar.google.com/citations?user=AUPTVF0AAAAJ&hl=en">Professor
-							Karthik Ramani</a>. In addition, I collaborate with <a class=""
-							href="https://www.muratkocaoglu.com">
-							Murat Kocaoglu</a> and
-						<a class="" href="https://ryosuzuki.org"> Ryo Suzuki</a> on various research projects.
-						My academic journey includes a Master's degree in Electrical and Computer Engineering
-						from Purdue University and a Bachelor's degree in Civil Engineering from the Indian Institute
-						of Technology (IIT) Patna.
-						My primary interest lies at the intersection of computer vision, machine learning, and
-						human-computer interactions.
+        <div class="col-md-9">
+          <div class="hero-card">
+            <h1 class="mb-1" style="font-weight: 900;">Rahul Jain</h1>
+            <div class="muted mb-2" style="font-weight: 600;">
+              PhD Student, Electrical &amp; Computer Engineering — Purdue University
+            </div>
 
-					</p>
-					<p class="mb-1">AI/ML: Developing ML models adapting to user needs and understanding.
-					</p>
-					<p class="mb-1">Human Understanding: Exploring human embodied learning and environment.
-					</p>
-					<p>
-						Human AI Interaction: Designing interactions between Humans and AI.
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
+            <div class="mb-3">
+              <span class="chip">Computer Vision</span>
+              <span class="chip">Vision-Language</span>
+              <span class="chip">Human-AI Interaction</span>
+              <span class="chip">AR/VR</span>
+            </div>
 
-	<div class="container">
-		<section class="col-xs-10 col-md-offset-1 my-5" id="highlights">
-			<h3 class="text-center section-heading">Recent highlights</h3>
-			<ul class=" mx-5">
-				<li>
-					<b> <span style="color: #ff0000">New!</span> [May, 2025] </b> Started Research Intern at <a class="" href="https://www.linkedin.com/company/primevideoamazonstudios/"> 
-						Prime Video and Studios CoreTech team </a> in Seattle  on developing large multimodal models.
-				</li>
-				<li>
-					<b> <span style="color: #ff0000">New!</span> [January, 2025] </b> Three papers accepted to <a class="" href="https://chi2025.acm.org">
-							CHI 2025. </a>
-				</li>
-				<li>
-					<b> <span style="color: #ff0000">New!</span> [December, 2024] </b> One papers accepted to <a class="" href="https://www.computer.org/csdl/journal/tg">
-							TVCG. </a>
-				</li>
-				<li>
-					<b> <span style="color: #ff0000">New!</span> [July, 2024] </b> Our paper <u><i>AnnotateXR: An Extended Reality Workflow
-					for Automating Data Annotation to Support Computer Vision Applications </i></u> has been accepted to JCISE
-					2024.
-				</li>
-				<li>
-					<b> <span style="color: #ff0000">New!</span> [July, 2024] </b> Our paper <u><i>AvaTTAR: Table Tennis 
-						Stroke Training with On-body and Detached Visualization in Augmented Reality </i></u> has been accepted to UIST
-					2024.
-				</li>
-				<li>
-					<b> <span style="color: #ff0000">New!</span> [January, 2024] </b> Started an Computer Vision and HCI Research internship at 
-					<a class="" href="https://www.fujitsu.com/us/about/businesspolicy/tech/rd/"> Fujitsu Research of America. </a>
-				</li>
-				<li>
-					Our paper <u><i>Ubi-TOUCH: Ubiquitous
-							Tangible Object Utilization through
-							Consistent Hand-object interaction in Augmented Reality</i></u> has been accepted to UIST
-					2023.
-				</li>
-				<li>
-					Our paper <u><i>Interacting Objects: A
-							dataset
-							of object-object interactions for
-							richer dynamic scene representations</i> </u>has been accepted to IEEE Robotics and
-					Automation
-					Letters (RA-L) 2023.
-				</li>
-			</ul>
-		</section>
+            <p class="mb-3" id="about">
+              I’m a third-year PhD student at <a href="https://www.purdue.edu/">Purdue University</a>, part of the
+              <a href="https://engineering.purdue.edu/cdesign/wp/">Convergence Design Lab</a>, advised by
+              <a href="https://scholar.google.com/citations?user=AUPTVF0AAAAJ&hl=en">Prof. Karthik Ramani</a>.
+              I also collaborate with <a href="https://www.muratkocaoglu.com">Murat Kocaoglu</a> and
+              <a href="https://ryosuzuki.org">Ryo Suzuki</a>.
+              My research sits at the intersection of computer vision, machine learning, and human-computer interaction.
+            </p>
 
-		<section class="col-xs-10 col-md-offset-1 mb-5" id="research">
-			<h3 class="text-center section-heading">Recent Publications</h3>
-			<ul class="list-group mx-5">
-				<li class="publication-list-item-section">
-					<div class="publication-list-item row">
-						<div class="pl-0 col-4 mt-3"><img class="img-responsiveness w-90"
-								src="asset/image/caring.png" alt="sugar crepe image">
-						</div>
-						<div class="col mt-2 p-0">
-							<h3 id='top' class='publication-list-item-heading'>CARING-AI CHI 2025</h3>
-							<p class="mb-0">
-								CARING-AI: Towards Authoring Context-aware Augmented Reality INstruction through Generative Artificial Intelligence.
-							</p>
-							<p class="mb-2">Jingyu Shi*, <span class="font-weight-bold"> Rahul Jain* </span>,  
-								Seung-gun Chi, Hyung-jun Doh, Hyung-gun Chi, Alex Quinn, Karthik Ramani
-							</p>
-							<p class="mb-1">CHI  2025</p>
-							<p>
-								<a href="https://arxiv.org/pdf/2501.16557" class="btn btn-link pl-0"> [ PDF ] </a>
+            <div class="d-flex flex-wrap align-items-center">
+              <a class="btn btn-dark mr-2 mb-2" href="asset/pdf/Resume_Rahul_final.pdf">
+                <i class="fas fa-file mr-1"></i> CV
+              </a>
+              <a class="btn btn-outline-dark mr-2 mb-2" href="mailto:jain348@purdue.edu">
+                <i class="fas fa-envelope mr-1"></i> jain348@purdue.edu
+              </a>
+              <a class="btn btn-outline-dark mb-2"
+                href="https://scholar.google.com/citations?user=n8woqvsAAAAJ&hl=en">
+                <i class="fas fa-graduation-cap mr-1"></i> Google Scholar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-							</p>
-						</div>
-					</div>
-				</li>
-				<li class="publication-list-item-section">
-					<div class="publication-list-item row">
-						<div class="pl-0 col-4 mt-3"><img class="img-responsiveness w-90"
-								src="asset/pdf/annotateXR.png" alt="sugar crepe image">
-						</div>
-						<div class="col mt-2 p-0">
-							<h3 id='top' class='publication-list-item-heading'>AnnotateXR JCISE 2024</h3>
-							<p class="mb-0">
-								An Extended Reality Workflow for Automating Data Annotation to Support 
-								Computer Vision Applications
-							</p>
-							<p class="mb-2">Subramanian Chidambaram*, <span class="font-weight-bold"> Rahul Jain* </span>, 
-								Sai Swarup Reddy, Asim Unmesh, Karthik Ramani
-							</p>
-							<p class="mb-1">JCISE 2024</p>
-							<p>
-								<a href="asset/pdf/jcise.pdf" class="btn btn-link pl-0"> [ PDF ] </a>
+  <!-- Body -->
+  <main class="container">
 
-							</p>
-						</div>
-					</div>
-				</li>
+    <!-- News -->
+    <section id="news" class="my-5">
+      <h2 class="text-center section-heading">News</h2>
 
-				<li class="publication-list-item-section">
-					<div class="publication-list-item row">
-						<div class="pl-0 col-4 mt-3"><img class="img-responsiveness w-90"
-								src="asset/pdf/tt.png" alt="sugar crepe image">
-						</div>
-						<div class="col mt-2 p-0">
-							<h3 id='top' class='publication-list-item-heading'>avaTTAR UIST 2024</h3>
-							<p class="mb-0">
-								Table Tennis Stroke Training with On-body and Detached Visualization 
-								in Augmented Reality
-							</p>
-							<p class="mb-2"> Dizhi Ma*, Xiyun Hu*, Jingyu Shi, Mayank Patel, 
-								<span class="font-weight-bold"> Rahul Jain* </span>, 
-								Ziyi Liu, Zhengzhe Zhu, Karthik Ramani
-							</p>
-							<p class="mb-1">UIST 2024</p>
-							<p>
-								<a href="asset/pdf/tt.pdf" class="btn btn-link pl-0"> [ PDF ] </a>
+      <div class="cardx p-4">
+        <ul class="mb-0">
+          <li class="mb-2">
+            <span class="badge-venue mr-2">May 2025</span>
+            Started as a Research Intern at <a href="https://www.linkedin.com/company/primevideoamazonstudios/">Prime Video &amp; Studios CoreTech</a> (Seattle), working on large multimodal models.
+          </li>
+          <li class="mb-2">
+            <span class="badge-venue mr-2">Jan 2025</span>
+            Three papers accepted to <a href="https://chi2025.acm.org">CHI 2025</a>.
+          </li>
+          <li class="mb-2">
+            <span class="badge-venue mr-2">Dec 2024</span>
+            One paper accepted to <a href="https://www.computer.org/csdl/journal/tg">IEEE TVCG</a>.
+          </li>
+          <li class="mb-2">
+            <span class="badge-venue mr-2">Jul 2024</span>
+            <em>AnnotateXR</em> accepted to JCISE 2024.
+          </li>
+          <li class="mb-2">
+            <span class="badge-venue mr-2">Jul 2024</span>
+            <em>AvaTTAR</em> accepted to UIST 2024.
+          </li>
+          <li class="mb-2">
+            <span class="badge-venue mr-2">Jan 2024</span>
+            Started a Computer Vision + HCI research internship at <a href="https://www.fujitsu.com/us/about/businesspolicy/tech/rd/">Fujitsu Research of America</a>.
+          </li>
+          <li class="mb-0">
+            <span class="badge-venue mr-2">2023</span>
+            <em>Ubi-TOUCH</em> accepted to UIST 2023; <em>Interacting Objects</em> accepted to RA-L 2023 (presented at ICRA 2024).
+          </li>
+        </ul>
+      </div>
+    </section>
 
-							</p>
-						</div>
-					</div>
-				</li>
+    <!-- Publications -->
+    <section id="publications" class="my-5">
+      <h2 class="text-center section-heading">Selected Publications</h2>
 
-				<li class="publication-list-item-section ">
-					<div class="row publication-list-item">
-						<div class="pl-0 col-4 mt-3">
-							<img class="img-responsiveness  w-90" src="asset/image/RA-L_2023.png"
-								alt="model sketching image">
-						</div>
+      <!-- Publication Card 1 -->
+      <div class="cardx p-4 mb-4">
+        <div class="row">
+          <div class="col-md-4 mb-3 mb-md-0">
+            <img class="pub-thumb" src="asset/image/caring.png" alt="CARING-AI thumbnail" />
+          </div>
+          <div class="col-md-8">
+            <div class="d-flex align-items-center mb-2">
+              <span class="badge-venue mr-2">CHI 2025</span>
+              <h3 class="mb-0" style="font-weight: 800;">CARING-AI</h3>
+            </div>
+            <p class="mb-2">
+              CARING-AI: Towards Authoring Context-aware Augmented Reality Instruction through Generative AI.
+            </p>
+            <p class="muted mb-3">
+              Jingyu Shi*, <strong>Rahul Jain*</strong>, Seung-gun Chi, Hyung-jun Doh, Hyung-gun Chi, Alex Quinn, Karthik Ramani
+            </p>
+            <a class="btn btn-sm btn-outline-dark" href="https://arxiv.org/pdf/2501.16557">
+              <i class="fas fa-file-pdf mr-1"></i> PDF
+            </a>
+          </div>
+        </div>
+      </div>
 
-						<div class="col mt-2 p-0">
-							<h3 id='top' class='publication-list-item-heading'>Interacting Objects ICRA 2024</h3>
-							<p class="mb-0"> A dataset of object-object interactions for richer
-								dynamic scene representations </p>
-							<p class="mb-2">Asim Unmesh,<span class="font-weight-bold"> Rahul Jain* </span>, Jingyu Shi,
-								VK
-								Chaitanya, Hyung-Gun Chi, Subramanian Chidambaram, Alexander Quinn, Karthik Ramani.
-							</p>
-							<p class="mb-1">RA-L 2023 (ICRA 2024)</p>
-							<p>
-								<a href="asset/pdf/RA_L_2023.pdf" class="btn btn-link pl-0"> [ PDF ] </a>
+      <!-- Publication Card 2 -->
+      <div class="cardx p-4 mb-4">
+        <div class="row">
+          <div class="col-md-4 mb-3 mb-md-0">
+            <img class="pub-thumb" src="asset/pdf/annotateXR.png" alt="AnnotateXR thumbnail" />
+          </div>
+          <div class="col-md-8">
+            <div class="d-flex align-items-center mb-2">
+              <span class="badge-venue mr-2">JCISE 2024</span>
+              <h3 class="mb-0" style="font-weight: 800;">AnnotateXR</h3>
+            </div>
+            <p class="mb-2">
+              An Extended Reality Workflow for Automating Data Annotation to Support Computer Vision Applications.
+            </p>
+            <p class="muted mb-3">
+              Subramanian Chidambaram*, <strong>Rahul Jain*</strong>, Sai Swarup Reddy, Asim Unmesh, Karthik Ramani
+            </p>
+            <a class="btn btn-sm btn-outline-dark" href="asset/pdf/jcise.pdf">
+              <i class="fas fa-file-pdf mr-1"></i> PDF
+            </a>
+          </div>
+        </div>
+      </div>
 
-							</p>
-						</div>
-					</div>
-				</li>
+      <!-- Publication Card 3 -->
+      <div class="cardx p-4 mb-4">
+        <div class="row">
+          <div class="col-md-4 mb-3 mb-md-0">
+            <img class="pub-thumb" src="asset/pdf/tt.png" alt="AvaTTAR thumbnail" />
+          </div>
+          <div class="col-md-8">
+            <div class="d-flex align-items-center mb-2">
+              <span class="badge-venue mr-2">UIST 2024</span>
+              <h3 class="mb-0" style="font-weight: 800;">AvaTTAR</h3>
+            </div>
+            <p class="mb-2">
+              Table Tennis Stroke Training with On-body and Detached Visualization in Augmented Reality.
+            </p>
+            <p class="muted mb-3">
+              Dizhi Ma*, Xiyun Hu*, Jingyu Shi, Mayank Patel, <strong>Rahul Jain*</strong>, Ziyi Liu, Zhengzhe Zhu, Karthik Ramani
+            </p>
+            <a class="btn btn-sm btn-outline-dark" href="asset/pdf/tt.pdf">
+              <i class="fas fa-file-pdf mr-1"></i> PDF
+            </a>
+          </div>
+        </div>
+      </div>
 
-			</ul>
-		</section>
+      <!-- Publication Card 4 -->
+      <div class="cardx p-4">
+        <div class="row">
+          <div class="col-md-4 mb-3 mb-md-0">
+            <img class="pub-thumb" src="asset/image/RA-L_2023.png" alt="Interacting Objects thumbnail" />
+          </div>
+          <div class="col-md-8">
+            <div class="d-flex align-items-center mb-2">
+              <span class="badge-venue mr-2">RA-L 2023 / ICRA 2024</span>
+              <h3 class="mb-0" style="font-weight: 800;">Interacting Objects</h3>
+            </div>
+            <p class="mb-2">
+              A dataset of object-object interactions for richer dynamic scene representations.
+            </p>
+            <p class="muted mb-3">
+              Asim Unmesh, <strong>Rahul Jain*</strong>, Jingyu Shi, VK Chaitanya, Hyung-Gun Chi, Subramanian Chidambaram, Alexander Quinn, Karthik Ramani
+            </p>
+            <a class="btn btn-sm btn-outline-dark" href="asset/pdf/RA_L_2023.pdf">
+              <i class="fas fa-file-pdf mr-1"></i> PDF
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<section class="col-xs-10 col-md-offset-1 mb-5" id="Services">
-			<h3 class="text-center section-heading">Academic Services</h3>
-			<ul class="mx-5">
-				<li>
-					Mentoring One graduate Student - Hyungjun Doh.
-				</li>
-				<li>
-					Mentored Two Undergraduate Student - Hyungjun Doh and Heesoo Kim.
-				</li>
-				<li>
-					Graduate Mentor at Summer Underdergrad Research Fellowship <a
-						href="https://engineering.purdue.edu/Engr/Research/EURO/students/about-SURF"> SURF [2021,2023]
-					</a>
-				</li>
-				<li>
-					Reviewer at CHI 2025, 2024, IEEE VR 2025, 2024, CHI 2024 LBW, CSCW 2024, DIS 2024, RAL TVCG
-				</li>
-				
-			</ul>
-		</section>
+    <!-- Service -->
+    <section id="service" class="my-5">
+      <h2 class="text-center section-heading">Academic Service</h2>
+      <div class="cardx p-4">
+        <ul class="mb-0">
+          <li class="mb-2">Mentoring: 1 graduate student (Hyungjun Doh).</li>
+          <li class="mb-2">Mentored 2 undergraduate students (Hyungjun Doh, Heesoo Kim).</li>
+          <li class="mb-2">
+            Graduate mentor, Summer Undergraduate Research Fellowship (SURF)
+            <a href="https://engineering.purdue.edu/Engr/Research/EURO/students/about-SURF">[2021, 2023]</a>.
+          </li>
+          <li class="mb-0">
+            Reviewer: CHI 2025/2024, IEEE VR 2025/2024, CHI 2024 LBW, CSCW 2024, DIS 2024, RA-L, TVCG.
+          </li>
+        </ul>
+      </div>
+    </section>
 
-		<section class="col-xs-10 col-md-offset-1" id="preprint">
-			<h3 class="text-center section-heading"> Selected Publication</h3>
-			<ul class="list-group mx-5">
-				<li class="selected-publication-list-item-section my-2">
-					<div class="mt-2 ml-5">
-						<h4 id='top' class='font-weight-bold'> CARING-AI: Towards Authoring Context-aware Augmented
-							Reality
-							INstruction
-							through Generative Artificial Intelligence. </h4>
-						<p class="mb-2">Jingyu Shi*, <span class="font-weight-bold"> Rahul Jain* </span>, Seunggeun
-							Chi*, Hyungjun
-							Doh,
-							Hyunggun Chi, Alexander J.
-							Quinn, Karthik Ramani (2023).</p>
-						<p class="mb-1">CHI 2025</p>
-						<a class="" href="https://arxiv.org/pdf/2501.16557"> [PDF] </a>
-						</p>
-					</div>
-				</li>
+    <div class="text-right mb-4">
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </main>
 
-				<li class="selected-publication-list-item-section my-2">
-					<div class="mt-2 ml-5">
-						<h4 id='top' class='font-weight-bold'> Visualizing Causality in Mixed Reality for Manual Task
-							Learning: An
-							Exploratory Study. </h4>
-						<p class="mb-2"><span class="font-weight-bold"> Rahul Jain* </span>, Jingyu Shi*, Andrew Benton,
-							Moiz
-							Rasheed,
-							Hyungjun Doh, Subramanian
-							Chidambaram, Karthik Ramani</p>
-						<p class="mb-1"> TVCG 2024</p>
-						<p><a href="https://arxiv.org/abs/2310.13167">[ PDF ]</a>
-						</p>
-					</div>
-				</li>
-				
-				<li class="selected-publication-list-item-section my-2">
-					<div class="mt-2 ml-5">
-						<h4 id='top' class='font-weight-bold'>Ubi-TOUCH: Ubiquitous Tangible Object Utilization through
-							Consistent
-							Hand-object interaction in
-							Augmented Reality. </h4>
-						<p class="mb-2"> <span class="font-weight-bold"> Rahul Jain* </span>, Jingyu Shi*, Runlin Duan,
-							Zhengzhe Zhu,
-							Xun
-							Qian
-							Karthik Ramani (2023).</p>
-						<p class="mb-1"> UIST 2023</p>
-						<p> <a href="asset/pdf/UIST_2023.pdf">[ PDF ]</a>
-					</div>
-				</li>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <div>© <span id="year"></span> Rahul Jain</div>
+      <div class="mt-2 mt-md-0 muted">Last updated: Jan 2026</div>
+    </div>
+  </footer>
 
-				<li class="selected-publication-list-item-section my-2">
-					<div class="mt-2 ml-5">
-						<h4 id='top' class='font-weight-bold'> Interacting Objects:
-							A dataset of object-object interactions for richer
-							dynamic scene representations </h4>
-						<p class="mb-2">Asim Unmesh, <span class="font-weight-bold"> Rahul Jain </span>, Jingyu Shi, VK
-							Chaitanya,
-							Hyung-Gun Chi, Subramanian
-							Chidambaram, Alexander J.
-							Quinn, Karthik Ramani (2023).</p>
-						<p class="mb-1">RA-L 2023 ICRA 2024</p>
-						<p> <a href="asset/pdf/RA_L_2023.pdf">[ PDF ]</a>
-						</p>
-					</div>
-				</li>
-
-				<li class="selected-publication-list-item-section my-2">
-					<div class="mt-2 ml-5">
-						<h4 id='top' class='font-weight-bold'> An HCI-Centric Survey and Taxonomy of
-							Human-Generative-AI
-							Interactions</h3>
-							<p class="mb-2">Jingyu Shi*,<span class="font-weight-bold"> Rahul Jain* </span>, Hyungjun
-								Doh, Ryo Suzuki, Karthik Ramani.
-							</p>
-							<p class="mb-1">Under Review</p>
-							<p>
-								<a href="https://arxiv.org/pdf/2310.07127.pdf" class="btn btn-link pl-0"> [ PDF ] </a>
-							</p>
-					</div>
-				</li>
-
-				<li class="selected-publication-list-item-section my-2">
-					<div class="mt-2 ml-5">
-						<h4 id='top' class='font-weight-bold'>Understanding Generative AI in Art: An Interview Study
-							with Artists on G-AI from an HCI Perspective</h4>
-						<p class="mb-2">Jingyu Shi,<span class="font-weight-bold"> Rahul Jain </span>, Runlin Duan,
-							Karthik Ramani.
-						</p>
-						<p class="mb-1">Under Review</p>
-						<p>
-							<a href="https://arxiv.org/pdf/2310.13149.pdf" class="btn btn-link pl-0"> [ PDF ] </a>
-						</p>
-					</div>
-				</li>
-				<li class="selected-publication-list-item-section my-2">
-					<div class="mt-2 ml-5">
-						<h4 id='top' class='font-weight-bold'> Vision-based Obstacle Removal System for Autonomous
-							Ground
-							Vehicles Using a Robotic Arm. </h4>
-						<p class="mb-2"> Khashayar Asadi, <span class="font-weight-bold"> Rahul Jain </span>, Ziqian
-							Qin, Mingda Sun,
-							Mojtaba Noghabaei, Jeremy Cole, Kevin Han, Edgar Lobaton</p>
-						<p class="mb-1">ASCE i3ce2019 </p>
-						<p><a href="https://arxiv.org/abs/1901.08180">[ PDF ]</a>
-						</p>
-					</div>
-				</li>
-			</ul>
-
-		</section>
-
-	</div>
-	<hr class='featurette-divider'>
-	<footer class="mb-2">
-		<p class='mx-5 d-flex justify-content-end'><a class="" href='#top'>Back to top</a></p>
-	</footer>
-	<footer class="mt-2">
-		2023 by Rahul Jain
-	</footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 
 </html>
