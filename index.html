@@ -16,171 +16,227 @@
 
   <!-- Small inline styling upgrades so you can paste-and-go -->
   <style>
-    :root{
-      --bg: #FFF9F0;
-      --header: #EFE6D6;
-      --card: #FFFFFF;
-      --ink: #121212;
-      --muted: #5A5A5A;
-      --border: rgba(0,0,0,0.08);
-      --shadow: 0 10px 24px rgba(0,0,0,0.06);
-      --radius: 14px;
-    
-      --accent: #0F766E;
-      --accentHover: #115E59;
-    }
-    
-    /* links/buttons accent */
-    a { color: var(--accent); }
-    a:hover { color: var(--accentHover); }
-    .btn-dark { background: var(--ink); border-color: var(--ink); }
-    .btn-outline-dark:hover { background: var(--ink); color: white; }
-    
-    /* Animated background layer */
-    .bg-anim{
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      background: radial-gradient(700px 500px at 10% 10%, rgba(15,118,110,0.12), transparent 60%),
-                  radial-gradient(700px 500px at 90% 20%, rgba(124,45,18,0.08), transparent 60%),
-                  radial-gradient(900px 650px at 30% 90%, rgba(37,99,235,0.07), transparent 60%),
-                  linear-gradient(180deg, rgba(255,255,255,0.0), rgba(255,255,255,0.35));
-      filter: saturate(1.05);
-      animation: bgFloat 16s ease-in-out infinite alternate;
-      transform: translateZ(0);
-    }
-    
-    /* Gentle motion */
-    @keyframes bgFloat{
-      0%   { transform: scale(1) translate(0px, 0px); }
-      50%  { transform: scale(1.03) translate(-10px, 8px); }
-      100% { transform: scale(1.02) translate(10px, -6px); }
-    }
-    
-    /* Respect accessibility */
-    @media (prefers-reduced-motion: reduce){
-      .bg-anim{ animation: none; }
-    }
+  /* =========================
+     THEME + ANIMATED BACKGROUND
+     Paste this whole block into <head> (replace your current <style>).
+     ========================= */
 
-    :root {
-      --bg: rgb(255, 252, 244);
-      --header: rgb(240, 234, 214);
-      --card: #ffffff;
-      --ink: #111;
-      --muted: #555;
-      --border: rgba(0, 0, 0, 0.08);
-      --shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
-      --radius: 14px;
-    }
+  :root {
+    /* Theme A: Warm Paper + Deep Teal */
+    --bg: #FFF9F0;          /* warm paper */
+    --header: #EFE6D6;      /* soft beige */
+    --card: #FFFFFF;        /* card white */
+    --ink: #121212;         /* primary text */
+    --muted: #5A5A5A;       /* secondary text */
+    --border: rgba(0, 0, 0, 0.08);
+    --shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+    --radius: 14px;
 
-    body {
-      background: var(--bg);
-      color: var(--ink);
-    }
+    --accent: #0F766E;      /* deep teal */
+    --accentHover: #115E59; /* teal hover */
+    --accentSoft: rgba(15, 118, 110, 0.12);
+  }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+  /* Base */
+  html, body {
+    height: 100%;
+  }
 
-    a:hover {
-      text-decoration: underline;
-    }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+  }
 
-    .site-header {
-      background: var(--header);
-      border-bottom: 1px solid var(--border);
-    }
+  /* Links */
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
 
-    .hero {
-      background: var(--header);
-    }
+  a:hover {
+    color: var(--accentHover);
+    text-decoration: underline;
+  }
 
-    .hero-card {
-      background: rgba(255, 255, 255, 0.65);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 1.25rem;
-      backdrop-filter: blur(6px);
-    }
+  /* Header + hero */
+  .site-header {
+    background: var(--header);
+    border-bottom: 1px solid var(--border);
+  }
 
-    .avatar {
-      width: 140px;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 999px;
-      border: 4px solid rgba(255, 255, 255, 0.75);
-      box-shadow: var(--shadow);
-    }
+  .hero {
+    background: var(--header);
+  }
 
-    .muted {
-      color: var(--muted);
-    }
+  /* Animated background layer (requires <div class="bg-anim"></div> right after <body>) */
+  .bg-anim {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(800px 560px at 12% 12%, rgba(15, 118, 110, 0.14), transparent 60%),
+      radial-gradient(780px 520px at 88% 20%, rgba(37, 99, 235, 0.08), transparent 60%),
+      radial-gradient(920px 640px at 30% 92%, rgba(124, 45, 18, 0.06), transparent 60%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.00), rgba(255, 255, 255, 0.35));
+    filter: saturate(1.05);
+    animation: bgFloat 16s ease-in-out infinite alternate;
+    transform: translateZ(0);
+  }
 
-    .chip {
-      display: inline-block;
-      padding: .25rem .6rem;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(255, 255, 255, 0.7);
-      font-size: .9rem;
-      margin-right: .4rem;
-      margin-bottom: .4rem;
-      font-weight: 600;
-    }
+  @keyframes bgFloat {
+    0%   { transform: scale(1) translate(0px, 0px); }
+    50%  { transform: scale(1.03) translate(-10px, 8px); }
+    100% { transform: scale(1.02) translate(10px, -6px); }
+  }
 
-    .section-heading {
-      margin-top: 2.25rem;
-      margin-bottom: 1rem;
-      font-weight: 900;
-    }
+  @media (prefers-reduced-motion: reduce) {
+    .bg-anim { animation: none; }
+  }
 
-    .cardx {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
+  /* Hero card */
+  .hero-card {
+    background: rgba(255, 255, 255, 0.70);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1.25rem;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+  }
 
-    .pub-thumb {
-      width: 100%;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      object-fit: cover;
-    }
+  /* Avatar */
+  .avatar {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 999px;
+    border: 4px solid rgba(255, 255, 255, 0.80);
+    box-shadow: var(--shadow);
+  }
 
-    .badge-venue {
-      font-size: .85rem;
-      border: 1px solid var(--border);
-      background: rgba(240, 234, 214, 0.7);
-      color: #222;
-      padding: .25rem .55rem;
-      border-radius: 999px;
-      font-weight: 800;
-      display: inline-block;
-    }
+  /* Muted text utility */
+  .muted {
+    color: var(--muted);
+  }
 
-    .footer {
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      padding: 1.25rem 0;
-      margin-top: 2rem;
-      font-size: .95rem;
-    }
+  /* Chips */
+  .chip {
+    display: inline-block;
+    padding: .25rem .6rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.75);
+    font-size: .9rem;
+    margin-right: .4rem;
+    margin-bottom: .4rem;
+    font-weight: 650;
+  }
 
-    .nav-link {
-      font-weight: 700;
-    }
+  /* Section headings */
+  .section-heading {
+    margin-top: 2.25rem;
+    margin-bottom: 1rem;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+  }
 
-    /* Subtle highlight band */
-    .band {
-      background: rgba(240, 234, 214, 0.55);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
-    }
-  </style>
+  /* Cards */
+  .cardx {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+
+  /* Subtle highlight band */
+  .band {
+    background: rgba(239, 230, 214, 0.55);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  }
+
+  /* Publication thumbs */
+  .pub-thumb {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    object-fit: cover;
+  }
+
+  /* Venue badge */
+  .badge-venue {
+    font-size: .85rem;
+    border: 1px solid var(--border);
+    background: rgba(239, 230, 214, 0.70);
+    color: #222;
+    padding: .25rem .55rem;
+    border-radius: 999px;
+    font-weight: 850;
+    display: inline-block;
+  }
+
+  /* Navbar */
+  .nav-link {
+    font-weight: 750;
+  }
+
+  /* Buttons — make accents feel intentional */
+  .btn-dark {
+    background: var(--ink);
+    border-color: var(--ink);
+  }
+
+  .btn-dark:hover {
+    background: #000;
+    border-color: #000;
+  }
+
+  .btn-outline-dark {
+    border-color: rgba(18, 18, 18, 0.65);
+    color: var(--ink);
+  }
+
+  .btn-outline-dark:hover {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: #fff;
+  }
+
+  /* Optional: accent-outline button (use class="btn btn-outline-accent") */
+  .btn-outline-accent {
+    border: 1px solid rgba(15, 118, 110, 0.45);
+    color: var(--accent);
+    background: transparent;
+  }
+
+  .btn-outline-accent:hover {
+    border-color: var(--accent);
+    background: rgba(15, 118, 110, 0.10);
+    color: var(--accentHover);
+  }
+
+  /* Footer */
+  .footer {
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    padding: 1.25rem 0;
+    margin-top: 2rem;
+    font-size: .95rem;
+  }
+
+  /* Small polish */
+  .cardx, .hero-card {
+    transition: transform 180ms ease, box-shadow 180ms ease;
+  }
+
+  .cardx:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+  }
+</style>
+
 </head>
 
 <body>
