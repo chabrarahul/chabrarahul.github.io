@@ -7,236 +7,218 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
   <title>Rahul Jain</title>
-  <meta name="description"
-    content="Rahul Jain — PhD student at Purdue University. Research at the intersection of computer vision, machine learning, and human-computer interaction, focusing on physically intelligent systems." />
+  <meta
+    name="description"
+    content="Rahul Jain — Final-year PhD student at Purdue University. Research at the intersection of computer vision, machine learning, and human-computer interaction, focusing on physically intelligent systems."
+  />
 
+  <!-- Base CSS -->
   <link rel="stylesheet" href="asset/css/bootstrap.css" />
   <link rel="stylesheet" href="asset/css/all.css" />
   <link rel="stylesheet" href="asset/css/style.css" />
 
-  <!-- Small inline styling upgrades so you can paste-and-go -->
+  <!-- Seth-style typography (serif headings + clean sans body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Theme + subtle animated background -->
   <style>
-  /* =========================
-     THEME + ANIMATED BACKGROUND
-     Paste this whole block into <head> (replace your current <style>).
-     ========================= */
+    /* =========================
+       THEME + SUBTLE ANIMATED BACKGROUND
+       Paste-and-go <head> block
+       ========================= */
 
-  :root {
-    /* Theme A: Warm Paper + Deep Teal */
-    --bg: #FFF9F0;          /* warm paper */
-    --header: #EFE6D6;      /* soft beige */
-    --card: #FFFFFF;        /* card white */
-    --ink: #121212;         /* primary text */
-    --muted: #5A5A5A;       /* secondary text */
-    --border: rgba(0, 0, 0, 0.08);
-    --shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
-    --radius: 14px;
+    :root {
+      /* Editorial warm paper theme */
+      --bg: #FAF7F2;           /* warm paper */
+      --header: #F1ECE2;       /* soft beige */
+      --card: #FFFFFF;         /* card white */
+      --ink: #1A1A1A;          /* primary text */
+      --muted: #5A5A5A;        /* secondary text */
+      --border: rgba(0, 0, 0, 0.08);
+      --shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+      --radius: 16px;
 
-    --accent: #0F766E;      /* deep teal */
-    --accentHover: #115E59; /* teal hover */
-    --accentSoft: rgba(15, 118, 110, 0.12);
-  }
+      --accent: #0F766E;       /* deep teal */
+      --accentHover: #115E59;  /* teal hover */
+      --accentSoft: rgba(15, 118, 110, 0.10);
+    }
 
-  /* Base */
-  html, body {
-    height: 100%;
-  }
+    html, body { height: 100%; }
 
-  body {
-    background: var(--bg);
-    color: var(--ink);
-  }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16.5px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
 
-  /* Links */
-  a {
-    color: var(--accent);
-    text-decoration: none;
-  }
+    p { margin-bottom: 1.1rem; }
 
-  a:hover {
-    color: var(--accentHover);
-    text-decoration: underline;
-  }
+    /* Headings: editorial serif */
+    h1, h2, h3, h4, h5 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
 
-  /* Header + hero */
-  .site-header {
-    background: var(--header);
-    border-bottom: 1px solid var(--border);
-  }
+    /* Links */
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      color: var(--accentHover);
+      text-decoration: underline;
+    }
 
-  .hero {
-    background: var(--header);
-  }
+    /* Header + hero bands */
+    .site-header {
+      background: var(--header);
+      border-bottom: 1px solid var(--border);
+    }
+    .hero {
+      background: var(--header);
+    }
 
-  /* Animated background layer (requires <div class="bg-anim"></div> right after <body>) */
-  .bg-anim {
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-    background:
-      radial-gradient(800px 560px at 12% 12%, rgba(15, 118, 110, 0.14), transparent 60%),
-      radial-gradient(780px 520px at 88% 20%, rgba(37, 99, 235, 0.08), transparent 60%),
-      radial-gradient(920px 640px at 30% 92%, rgba(124, 45, 18, 0.06), transparent 60%),
-      linear-gradient(180deg, rgba(255, 255, 255, 0.00), rgba(255, 255, 255, 0.35));
-    filter: saturate(1.05);
-    animation: bgFloat 16s ease-in-out infinite alternate;
-    transform: translateZ(0);
-  }
+    /* Subtle animated background layer
+       Add <div class="bg-anim"></div> right after <body> */
+    .bg-anim {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        radial-gradient(900px 600px at 15% 15%, rgba(15, 118, 110, 0.06), transparent 65%),
+        radial-gradient(800px 520px at 85% 25%, rgba(37, 99, 235, 0.05), transparent 65%),
+        radial-gradient(900px 620px at 30% 85%, rgba(124, 45, 18, 0.04), transparent 65%);
+      animation: bgFloat 22s ease-in-out infinite alternate;
+      transform: translateZ(0);
+      filter: saturate(1.03);
+    }
 
-  @keyframes bgFloat {
-    0%   { transform: scale(1) translate(0px, 0px); }
-    50%  { transform: scale(1.03) translate(-10px, 8px); }
-    100% { transform: scale(1.02) translate(10px, -6px); }
-  }
+    @keyframes bgFloat {
+      0%   { transform: scale(1) translate(0px, 0px); }
+      50%  { transform: scale(1.02) translate(-8px, 6px); }
+      100% { transform: scale(1.01) translate(8px, -5px); }
+    }
 
-  @media (prefers-reduced-motion: reduce) {
-    .bg-anim { animation: none; }
-  }
+    @media (prefers-reduced-motion: reduce) {
+      .bg-anim { animation: none; }
+    }
 
-  /* Hero card */
-  .hero-card {
-    background: rgba(255, 255, 255, 0.70);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    padding: 1.25rem;
-    backdrop-filter: blur(7px);
-    -webkit-backdrop-filter: blur(7px);
-  }
+    /* Hero card (editorial, less glassy) */
+    .hero-card {
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.5rem;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
 
-  /* Avatar */
-  .avatar {
-    width: 140px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 999px;
-    border: 4px solid rgba(255, 255, 255, 0.80);
-    box-shadow: var(--shadow);
-  }
+    .hero h1 {
+      font-size: clamp(2.6rem, 5vw, 3.4rem);
+      margin-bottom: 0.6rem;
+    }
 
-  /* Muted text utility */
-  .muted {
-    color: var(--muted);
-  }
+    /* Avatar */
+    .avatar {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 999px;
+      border: 4px solid rgba(255, 255, 255, 0.85);
+      box-shadow: var(--shadow);
+    }
 
-  /* Chips */
-  .chip {
-    display: inline-block;
-    padding: .25rem .6rem;
-    border-radius: 999px;
-    border: 1px solid var(--border);
-    background: rgba(255, 255, 255, 0.75);
-    font-size: .9rem;
-    margin-right: .4rem;
-    margin-bottom: .4rem;
-    font-weight: 650;
-  }
+    /* Muted utility */
+    .muted { color: var(--muted); }
 
-  /* Section headings */
-  .section-heading {
-    margin-top: 2.25rem;
-    margin-bottom: 1rem;
-    font-weight: 900;
-    letter-spacing: -0.01em;
-  }
+    /* Chips */
+    .chip {
+      display: inline-block;
+      padding: .28rem .65rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.85);
+      font-size: .92rem;
+      margin-right: .4rem;
+      margin-bottom: .45rem;
+      font-weight: 650;
+    }
 
-  /* Cards */
-  .cardx {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-  }
+    /* Section headings */
+    .section-heading {
+      margin-top: 2.25rem;
+      margin-bottom: 1rem;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+    }
 
-  /* Subtle highlight band */
-  .band {
-    background: rgba(239, 230, 214, 0.55);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
-  }
+    /* Cards */
+    .cardx {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+    .cardx:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+    }
 
-  /* Publication thumbs */
-  .pub-thumb {
-    width: 100%;
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    object-fit: cover;
-  }
+    /* Navbar */
+    .nav-link { font-weight: 650; }
 
-  /* Venue badge */
-  .badge-venue {
-    font-size: .85rem;
-    border: 1px solid var(--border);
-    background: rgba(239, 230, 214, 0.70);
-    color: #222;
-    padding: .25rem .55rem;
-    border-radius: 999px;
-    font-weight: 850;
-    display: inline-block;
-  }
+    /* Buttons */
+    .btn-dark {
+      background: var(--ink);
+      border-color: var(--ink);
+    }
+    .btn-dark:hover {
+      background: #000;
+      border-color: #000;
+    }
 
-  /* Navbar */
-  .nav-link {
-    font-weight: 750;
-  }
+    .btn-outline-dark {
+      border-color: rgba(26, 26, 26, 0.55);
+      color: var(--ink);
+    }
+    .btn-outline-dark:hover {
+      background: var(--ink);
+      border-color: var(--ink);
+      color: #fff;
+    }
 
-  /* Buttons — make accents feel intentional */
-  .btn-dark {
-    background: var(--ink);
-    border-color: var(--ink);
-  }
+    .btn-outline-accent {
+      border: 1px solid rgba(15, 118, 110, 0.45);
+      color: var(--accent);
+      background: transparent;
+    }
+    .btn-outline-accent:hover {
+      border-color: var(--accent);
+      background: rgba(15, 118, 110, 0.10);
+      color: var(--accentHover);
+    }
 
-  .btn-dark:hover {
-    background: #000;
-    border-color: #000;
-  }
-
-  .btn-outline-dark {
-    border-color: rgba(18, 18, 18, 0.65);
-    color: var(--ink);
-  }
-
-  .btn-outline-dark:hover {
-    background: var(--ink);
-    border-color: var(--ink);
-    color: #fff;
-  }
-
-  /* Optional: accent-outline button (use class="btn btn-outline-accent") */
-  .btn-outline-accent {
-    border: 1px solid rgba(15, 118, 110, 0.45);
-    color: var(--accent);
-    background: transparent;
-  }
-
-  .btn-outline-accent:hover {
-    border-color: var(--accent);
-    background: rgba(15, 118, 110, 0.10);
-    color: var(--accentHover);
-  }
-
-  /* Footer */
-  .footer {
-    border-top: 1px solid var(--border);
-    color: var(--muted);
-    padding: 1.25rem 0;
-    margin-top: 2rem;
-    font-size: .95rem;
-  }
-
-  /* Small polish */
-  .cardx, .hero-card {
-    transition: transform 180ms ease, box-shadow 180ms ease;
-  }
-
-  .cardx:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
-  }
-</style>
-
+    /* Footer */
+    .footer {
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      padding: 1.25rem 0;
+      margin-top: 2rem;
+      font-size: .95rem;
+    }
+  </style>
 </head>
 
 <body>
