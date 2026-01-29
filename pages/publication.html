@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Publications — Rahul Jain</title>
+
+  <!-- Base CSS -->
+  <link rel="stylesheet" href="asset/css/bootstrap.css" />
+  <link rel="stylesheet" href="asset/css/all.css" />
+  <link rel="stylesheet" href="asset/css/style.css" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+  <div class="bg-anim"></div>
+
+  <!-- NAVBAR (same as index.html) -->
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-light">
+      <div class="container d-flex justify-content-between">
+        <div>
+          <a class="nav-link d-inline text-dark" href="index.html">Home</a>
+          <a class="nav-link d-inline text-dark" href="projects.html">Projects</a>
+          <a class="nav-link d-inline text-dark font-weight-bold" href="publications.html">Publications</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container my-5">
+
+    <h1 class="text-center section-heading mb-5">Publications</h1>
+
+    <!-- ⬇️ EXACT SAME PUBLICATION CARDS ⬇️ -->
+    <!-- (Paste your entire publications section here unchanged) -->
+
+    <section id="publications">
+
+      <!-- CARING-AI -->
+      <div class="cardx p-4 mb-4">
+        <div class="row">
+          <div class="col-md-4">
+            <img class="pub-thumb" src="asset/image/caring.png" />
+          </div>
+          <div class="col-md-8">
+            <span class="badge-venue">CHI 2025</span>
+            <h3 style="font-weight:900;">CARING-AI</h3>
+            <p>CARING-AI: Towards Authoring Context-aware AR Instruction through Generative AI.</p>
+            <p class="muted">
+              Jingyu Shi*, <strong>Rahul Jain*</strong>, Seung-gun Chi, Karthik Ramani
+            </p>
+            <a class="btn btn-sm btn-outline-dark" href="https://arxiv.org/pdf/2501.16557">
+              PDF
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat for other papers (unchanged) -->
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container d-flex justify-content-between">
+      <span>© <span id="year"></span> Rahul Jain</span>
+      <span class="muted">Last updated: Jan 2026</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
 
