@@ -6,48 +6,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <title>Rahul Jain</title>
-  <meta
-    name="description"
-    content="Rahul Jain — Final-year PhD student at Purdue University. Research at the intersection of computer vision, machine learning, and human-computer interaction, focusing on physically intelligent systems."
-  />
+  <title>Publications — Rahul Jain</title>
+  <meta name="description"
+    content="Rahul Jain — Publications. Research at the intersection of computer vision, machine learning, and human-computer interaction, focusing on physically intelligent systems." />
 
   <!-- Base CSS -->
   <link rel="stylesheet" href="asset/css/bootstrap.css" />
   <link rel="stylesheet" href="asset/css/all.css" />
   <link rel="stylesheet" href="asset/css/style.css" />
 
-  <!-- Seth-style typography (serif headings + clean sans body) -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
+    rel="stylesheet" />
 
-  <!-- Theme + subtle animated background -->
   <style>
-    /* =========================
-       THEME + SUBTLE ANIMATED BACKGROUND
-       Paste-and-go <head> block
-       ========================= */
-
     :root {
-        --bg: #FAF7F2;          /* warm paper (page) */
-        --header: #F1ECE2;      /* slightly darker band */
-        --card: #FFFFFF;       /* clean white cards */
-        --ink: #1A1A1A;         /* soft black */
-        --muted: #5F5F5F;       /* readable gray */
-        --border: rgba(0, 0, 0, 0.08);
-        --shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
-        --radius: 16px;
-      
-        --accent: #0F766E;     /* deep teal */
-        --accentHover: #115E59;
-        --accentSoft: rgba(15, 118, 110, 0.10);
-      }
+      --bg: #FAF7F2;
+      --header: #F1ECE2;
+      --card: #FFFFFF;
+      --ink: #1A1A1A;
+      --muted: #5F5F5F;
+      --border: rgba(0, 0, 0, .08);
+      --shadow: 0 10px 22px rgba(0, 0, 0, .06);
+      --radius: 16px;
+      --accent: #0F766E;
+      --accentHover: #115E59;
+      --accentSoft: rgba(15, 118, 110, .10);
+    }
 
-    html, body { height: 100%; }
+    html,
+    body {
+      height: 100%;
+    }
 
     body {
       background: var(--bg);
@@ -59,107 +52,122 @@
       -moz-osx-font-smoothing: grayscale;
     }
 
-    p { margin-bottom: 1.1rem; }
-
-    /* Headings: editorial serif */
-    h1, h2, h3, h4, h5 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
       font-family: 'Playfair Display', Georgia, serif;
-      font-weight: 800;
+      font-weight: 900;
       letter-spacing: -0.02em;
     }
 
-    /* Links */
     a {
       color: var(--accent);
       text-decoration: none;
     }
+
     a:hover {
       color: var(--accentHover);
       text-decoration: underline;
     }
 
-    /* Header + hero bands */
     .site-header {
       background: var(--header);
       border-bottom: 1px solid var(--border);
     }
-    .hero {
-      background: var(--header);
+
+    .nav-link {
+      font-weight: 700;
     }
 
-    /* Subtle animated background layer
-       Add <div class="bg-anim"></div> right after <body> */
+    .nav-link.active {
+      color: var(--accent) !important;
+    }
+
     .bg-anim {
       position: fixed;
       inset: 0;
       z-index: -1;
       pointer-events: none;
       background:
-        radial-gradient(900px 600px at 15% 15%, rgba(15, 118, 110, 0.06), transparent 65%),
-        radial-gradient(800px 520px at 85% 25%, rgba(37, 99, 235, 0.05), transparent 65%),
-        radial-gradient(900px 620px at 30% 85%, rgba(124, 45, 18, 0.04), transparent 65%);
+        radial-gradient(900px 600px at 15% 15%, rgba(15, 118, 110, .06), transparent 65%),
+        radial-gradient(800px 520px at 85% 25%, rgba(37, 99, 235, .05), transparent 65%),
+        radial-gradient(900px 620px at 30% 85%, rgba(124, 45, 18, .04), transparent 65%);
       animation: bgFloat 22s ease-in-out infinite alternate;
       transform: translateZ(0);
       filter: saturate(1.03);
     }
 
     @keyframes bgFloat {
-      0%   { transform: scale(1) translate(0px, 0px); }
-      50%  { transform: scale(1.02) translate(-8px, 6px); }
-      100% { transform: scale(1.01) translate(8px, -5px); }
+      0% {
+        transform: scale(1) translate(0, 0);
+      }
+
+      50% {
+        transform: scale(1.02) translate(-8px, 6px);
+      }
+
+      100% {
+        transform: scale(1.01) translate(8px, -5px);
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .bg-anim { animation: none; }
+      .bg-anim {
+        animation: none;
+      }
     }
 
-    /* Hero card (editorial, less glassy) */
-    .hero-card {
-      background: rgba(255, 255, 255, 0.85);
+    /* Page heading */
+    .pub-page-title {
+      font-size: clamp(2.4rem, 4vw, 3.2rem);
+      margin: 1.6rem 0 .35rem;
+      letter-spacing: -0.03em;
+      text-align: center;
+    }
+
+    .pub-subhead {
+      text-align: center;
+      color: var(--muted);
+      font-weight: 600;
+      margin-bottom: 1.0rem;
+    }
+
+    /* Search/filter bar */
+    .pub-toolbar {
+      max-width: 980px;
+      margin: 0 auto 1.4rem;
+      display: flex;
+      gap: .8rem;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pub-input {
+      flex: 1 1 380px;
+      min-width: 260px;
+      padding: .65rem .85rem;
+      border-radius: 14px;
       border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 1.5rem;
-      transition: transform 180ms ease, box-shadow 180ms ease;
+      background: rgba(255, 255, 255, .9);
+      outline: none;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, .04);
     }
 
-    .hero h1 {
-      font-size: clamp(2.6rem, 5vw, 3.4rem);
-      margin-bottom: 0.6rem;
+    .pub-input:focus {
+      border-color: rgba(15, 118, 110, .35);
+      box-shadow: 0 0 0 4px rgba(15, 118, 110, .10);
     }
 
-    /* Avatar */
-    .avatar {
-      width: 140px;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 999px;
-      border: 4px solid rgba(255, 255, 255, 0.85);
-      box-shadow: var(--shadow);
-    }
-
-    /* Muted utility */
-    .muted { color: var(--muted); }
-
-    /* Chips */
-    .chip {
-      display: inline-block;
-      padding: .28rem .65rem;
-      border-radius: 999px;
+    .pub-select {
+      flex: 0 0 auto;
+      padding: .65rem .85rem;
+      border-radius: 14px;
       border: 1px solid var(--border);
-      background: rgba(255, 255, 255, 0.85);
-      font-size: .92rem;
-      margin-right: .4rem;
-      margin-bottom: .45rem;
-      font-weight: 650;
-    }
-
-    /* Section headings */
-    .section-heading {
-      margin-top: 2.25rem;
-      margin-bottom: 1rem;
-      font-weight: 900;
-      letter-spacing: -0.01em;
+      background: rgba(255, 255, 255, .9);
+      font-weight: 700;
     }
 
     /* Cards */
@@ -168,93 +176,168 @@
       border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      transition: transform 180ms ease, box-shadow 180ms ease;
+      transition: transform 160ms ease, box-shadow 160ms ease;
     }
+
     .cardx:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+      transform: translateY(-1px);
+      box-shadow: 0 12px 26px rgba(0, 0, 0, .07);
     }
 
-    /* Navbar */
-    .nav-link { font-weight: 650; }
-
-    /* Buttons */
-    .btn-dark {
-      background: var(--ink);
-      border-color: var(--ink);
+    .pub-year {
+      margin: 2.2rem 0 1rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
     }
-    .btn-dark:hover {
-      background: #000;
-      border-color: #000;
+
+    .pub-year:after {
+      content: "";
+      display: block;
+      height: 1px;
+      margin-top: .65rem;
+      background: rgba(0, 0, 0, .08);
+    }
+
+    .pub-card {
+      padding: 1.1rem;
+    }
+
+    @media (min-width: 768px) {
+      .pub-card {
+        padding: 1.25rem;
+      }
+    }
+
+    .pub-media {
+      border-radius: 14px;
+      border: 2.5px solid var(--border);
+      background: rgba(255, 255, 255, 0.7);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      min-height: 150px;
+      position: relative;
+    }
+
+    .pub-thumb {
+      width: 100%;
+      height: 130px;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    /* Thumbnail fallback if src missing */
+    .thumb-fallback {
+      width: 100%;
+      height: 130px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--muted);
+      background: linear-gradient(180deg, rgba(15, 118, 110, .07), rgba(0, 0, 0, .02));
+      border: 1px dashed rgba(0, 0, 0, .14);
+      font-weight: 800;
+      letter-spacing: .02em;
+      padding: .7rem;
+    }
+
+    .badge-venue {
+      display: inline-block;
+      padding: .28rem .6rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, .92);
+      font-weight: 850;
+      font-size: .78rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    .badge-status {
+      display: inline-block;
+      padding: .28rem .6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(15, 118, 110, .25);
+      background: rgba(15, 118, 110, .08);
+      color: var(--accentHover);
+      font-weight: 850;
+      font-size: .78rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .pub-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 900;
+      margin: .2rem 0 .35rem;
+      line-height: 1.05;
+      font-size: clamp(1.45rem, 2.1vw, 2.0rem);
+    }
+
+    .pub-subtitle {
+      margin: 0 0 .45rem;
+      font-size: 1.05rem;
+      line-height: 1.55;
+      color: rgba(0, 0, 0, .88);
+    }
+
+    .pub-authors {
+      color: rgba(0, 0, 0, .72);
+      margin-bottom: .65rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .my-name {
+      font-weight: 900;
+      color: rgba(0, 0, 0, .88);
+    }
+
+    .pub-actions {
+      display: flex;
+      gap: .55rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .pub-actions .btn {
+      border-radius: 12px;
+      padding: .44rem .85rem;
+      font-weight: 850;
     }
 
     .btn-outline-dark {
-      border-color: rgba(26, 26, 26, 0.55);
+      border-color: rgba(26, 26, 26, .55);
       color: var(--ink);
+      background: rgba(255, 255, 255, .85);
     }
+
     .btn-outline-dark:hover {
       background: var(--ink);
       border-color: var(--ink);
       color: #fff;
     }
 
-    .btn-outline-accent {
-      border: 1px solid rgba(15, 118, 110, 0.45);
-      color: var(--accent);
-      background: transparent;
-    }
-    .btn-outline-accent:hover {
-      border-color: var(--accent);
-      background: rgba(15, 118, 110, 0.10);
-      color: var(--accentHover);
+    .btn[aria-disabled="true"] {
+      opacity: .55;
+      pointer-events: none;
     }
 
-    /* Footer */
-    .footer {
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      padding: 1.25rem 0;
-      margin-top: 2rem;
-      font-size: .95rem;
-    }
-
-    /* Make ALL images responsive by default */
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-    
-    /* Publications thumbnail */
-    .pub-thumb {
-      display: block;
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-    }
-    /* ===== FORCE PAGE BACKGROUND (FINAL OVERRIDE) ===== */
-    html, body {
-      background-color: var(--bg) !important;
-    }
-
-    main, section, .container, .container-fluid {
-      background: transparent !important;
-    }
-
-    .navbar, .navbar-light {
-      background: transparent !important;
-    }
-
-    .bg-white {
-      background: transparent !important;
+    .container {
+      max-width: 1080px;
     }
   </style>
 </head>
 
 <body>
-  <!-- Header / Nav -->
   <div class="bg-anim" aria-hidden="true"></div>
+
+  <!-- Header / Nav -->
   <header class="site-header sticky-top">
     <nav class="navbar navbar-light">
       <div class="container d-flex align-items-center justify-content-between">
@@ -275,39 +358,518 @@
         </div>
 
         <ul class="nav">
-          <li class="nav-item"><a class="nav-link text-dark" href="#top">Home</a></li>
-          <li class="nav-item"><a class="nav-link text-dark" href="#pillars">Research</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="index.html#top">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="index.html#pillars">Research</a></li>
           <li class="nav-item"><a class="nav-link text-dark" href="projects.html">Projects</a></li>
-          <a class="nav-link text-dark" href="publication.html">Publications</a>
-          <li class="nav-item"><a class="nav-link text-dark" href="#patents">Patents</a></li>
-          <li class="nav-item"><a class="nav-link text-dark" href="#service">Service</a></li>
+          <li class="nav-item"><a class="nav-link text-dark active" href="publication.html">Publications</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="index.html#patents">Patents</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="index.html#service">Service</a></li>
           <li class="nav-item"><a class="nav-link text-dark" href="asset/pdf/Resume_Rahul_final.pdf">CV</a></li>
-          <li class="nav-item"><a class="nav-link text-dark" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="index.html#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
   </header>
-  <main class="container my-5">
-    <h2 class="text-center section-heading">Publications</h2>
 
-    <!-- ✅ PASTE YOUR EXACT PUBLICATION CARDS HERE -->
-    <div class="cardx p-4 mb-4">
-      <div class="row">
-        <div class="col-md-4 mb-3 mb-md-0">
-          <img class="pub-thumb" src="asset/image/caring.png" alt="CARING-AI thumbnail" />
-        </div>
-        <div class="col-md-8">
-          <div class="d-flex align-items-center mb-2">
-            <span class="badge-venue mr-2">CHI 2025</span>
-            <h3 class="mb-0" style="font-weight: 900;">CARING-AI</h3>
+  <main class="container my-5">
+    <div class="pub-page-title">Publications</div>
+    <div class="pub-subhead">
+      Selected peer-reviewed papers in HCI, AR, and computer vision. Full list on
+      <a href="https://scholar.google.com/citations?user=n8woqvsAAAAJ&hl=en">Google Scholar</a>.
+    </div>
+
+    <!-- Search / Filter -->
+    <div class="pub-toolbar">
+      <input id="pubSearch" class="pub-input" type="search"
+        placeholder="Search papers by title, author, venue (e.g., 'CHI', 'inversion', 'Ramani')" aria-label="Search publications" />
+      <select id="pubFilter" class="pub-select" aria-label="Filter by status">
+        <option value="all">All</option>
+        <option value="published">Published</option>
+        <option value="under-review">Under Review</option>
+        <option value="coming-soon">Coming Soon</option>
+      </select>
+    </div>
+
+    <!-- ===================== 2026 ===================== -->
+    <h2 class="pub-year">2026</h2>
+
+    <!-- OVTAS (Coming Soon) -->
+    <div class="cardx pub-card mb-3 pub-item" data-status="coming-soon">
+      <div class="row align-items-center">
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="pub-media">
+            <div class="thumb-fallback">Thumbnail<br />Coming Soon</div>
           </div>
-          <p class="mb-2">CARING-AI: Towards Authoring Context-aware Augmented Reality Instruction through Generative AI.</p>
-          <p class="muted mb-3">Jingyu Shi*, <strong>Rahul Jain*</strong>, Seung-gun Chi, Karthik Ramani</p>
-          <a class="btn btn-sm btn-outline-dark" href="https://arxiv.org/pdf/2501.16557">PDF</a>
+        </div>
+
+        <div class="col-md-9">
+          <div class="pub-title">OVTAS</div>
+          <p class="pub-subtitle">Exploring Vision-Language Models for Open-Vocabulary Zero-Shot Action Segmentation</p>
+
+          <div class="pub-authors">
+            Asim Unmesh, Ramesh Kaki, <span class="my-name">Rahul Jain</span>, Mayank Patel, Karthik Ramani
+          </div>
+
+          <div class="pub-actions">
+            <a class="btn btn-sm btn-outline-dark" aria-disabled="true">
+              <i class="fas fa-file-pdf mr-1"></i> Coming Soon
+            </a>
+            <span class="badge-venue">ICRA 2026</span>
+            <span class="badge-status">Coming Soon</span>
+          </div>
         </div>
       </div>
     </div>
-  </main>
-</body>
-</html>
 
+    <!-- LBInv (Under Review) -->
+    <div class="cardx pub-card mb-3 pub-item" data-status="under-review">
+      <div class="row align-items-center">
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="pub-media">
+            <img class="pub-thumb" src="/asset/image/lbi.png" alt="LBInv thumbnail" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="col-md-9">
+          <div class="pub-title">LBInv</div>
+          <p class="pub-subtitle">Gradient-Free Image Inversion via Quasi-Newton Diffusion Solvers</p>
+
+          <div class="pub-authors">
+            <span class="my-name">Rahul Jain</span>, Mayank Patel, Karthik Ramani
+          </div>
+
+          <div class="pub-actions">
+            <a class="btn btn-sm btn-outline-dark" aria-disabled="true">
+              <i class="fas fa-file-pdf mr-1"></i> Coming Soon
+            </a>
+            <span class="badge-status">Under Review</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NA-VQA (Under Review) -->
+    <div class="cardx pub-card mb-3 pub-item" data-status="under-review">
+      <div class="row align-items-center">
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="pub-media">
+            <img class="pub-thumb" src="/asset/image/NAVQA.png" alt="NA-VQA thumbnail" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="col-md-9">
+          <div class="pub-title">NA-VQA</div>
+          <p class="pub-subtitle">Narrative Aligned Long Form Video Question Answering</p>
+
+          <div class="pub-authors">
+            <span class="my-name">Rahul Jain</span>, Keval Doshi, Burak Uzkent, Garin Kessler
+          </div>
+
+          <div class="pub-actions">
+            <a class="btn btn-sm btn-outline-dark" aria-disabled="true">
+              <i class="fas fa-file-pdf mr-1"></i> Coming Soon
+            </a>
+            <span class="badge-status">Under Review</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CANVAS-3D (Published) -->
+    <div class="cardx pub-card mb-3 pub-item" data-status="published">
+      <div class="row align-items-center">
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="pub-media">
+            <img class="pub-thumb" src="/asset/image/canvas3d.png" alt="CANVAS-3D thumbnail" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="col-md-9">
+          <div class="pub-title">CANVAS-3D</div>
+          <p class="pub-subtitle">
+            Canvas3D: Empowering Precise Spatial Control for Image Generation with Constraints from a 3D Virtual Canvas
+          </p>
+
+          <div class="pub-authors">
+            Runlin Duan*, Yuzhao Chen*, <span class="my-name">Rahul Jain</span>, Yichen Hu, Jingyu Shi, Karthik Ramani
+          </div>
+
+          <div class="pub-actions">
+            <a class="btn btn-sm btn-outline-dark" href="https://arxiv.org/pdf/2508.07135">
+              <i class="fas fa-file-pdf mr-1"></i> PDF
+            </a>
+            <span class="badge-venue">IUI 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ARify (Coming Soon) -->
+    <div class="cardx pub-card mb-3 pub-item" data-status="coming-soon">
+      <div class="row align-items-center">
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="pub-media">
+            <div class="thumb-fallback">Thumbnail<br />Coming Soon</div>
+          </div>
+        </div>
+
+        <div class="col-md-9">
+          <div class="pub-title">ARify</div>
+          <p class="pub-subtitle">
+            Leveraging Narrated Instructional Videos to Create Augmented Reality Tutorials for Procedural Tasks
+          </p>
+
+          <div class="pub-authors">
+            Xiyun Hu, Chenfei Zhu, Shao-Kang Hsia, Dizhi Ma, <span class="my-name">Rahul Jain</span>, Karthik Ramani
+          </div>
+
+          <div class="pub-actions">
+            <a class="btn btn-sm btn-outline-dark" aria-disabled="true">
+              <i class="fas fa-file-pdf mr-1"></i> Coming Soon
+            </a>
+            <span class="badge-venue">CHI 2026</span>
+            <span class="badge-status">Coming Soon</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== 2025 ===================== -->
+    <h2 class="pub-year">2025</h2>
+
+    <div class="cardx pub-card mb-3 pub-item" data-status="published">
+      <div class="row align-items-center">
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="pub-media">
+            <img class="pub-thumb" src="/asset/image/dynamo.png" alt="DYNAMO thumbnail" loading="lazy" />
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="pub-title">DYNAMO</div>
+          <p class="pub-subtitle">Dependency-Aware Deep Learning Framework for Articulated Assembly Motion Prediction</p>
+          <div class="pub-authors">Mayank Patel, <span class="my-name">Rahul Jain</span>, Asim Unmesh, Karthik Ramani</div>
+          <div class="pub-actions">
+            <a class="btn btn-sm btn-outline-dark" href="https://arxiv.org/pdf/2509.12430">
+              <i class="fas fa-file-pdf mr-1"></i> PDF
+            </a>
+            <span class="badge-venue">ICRA 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cardx pub-card mb-3 pub-item" data-status="published">
+      <div class="row align-items-center">
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="pub-media">
+            <img class="pub-thumb" src="/asset/image/caring.png" alt="CARING-AI thumbnail" loading="lazy" />
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="pub-title">CARING-AI</div>
+          <p class="pub-subtitle">CARING-AI: Towards Authoring Context-aware Augmented Reality Instruction through Generative AI.</p>
+          <div class="pub-authors">Jingyu Shi*, <span class="my-name">Rahul Jain</span>*, Seung-gun Chi, Karthik Ramani</div>
+          <div class="pub-actions">
+            <a class="btn btn-sm btn-outline-dark" href="https://arxiv.org/pdf/2501.16557">
+              <i class="fas fa-file-pdf mr-1"></i> PDF
+            </a>
+            <span class="badge-venue">CHI 2025</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cardx pub-card mb-3 pub-item" data-status="published">
+      <div class="row align-items-center">
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="pub-media">
+            <img class="pub-thumb" src="/asset/image/adaptive.png" alt="AdaptiveSliders thumbnail" loading="lazy" />
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="pub-title">AdaptiveSliders</div>
+          <p class="pub-subtitle">User-aligned Semantic Slider-based Editing of Text-to-Image Model Output</p>
+          <div class="pub-authors"><span class="my-name">Rahul Jain</span>, Amit Goel, Koichiro Niinuma, Aakar Gupta</div>
+          <div class="pub-actions">
+            <a class="btn btn-sm btn-outline-dark" href="https://dl.acm.org/doi/pdf/10.1145/3706598.3714292">
+              <i class="fas fa-file-pdf mr-1"></i> PDF
+            </a>
+            <span class="badge-venue">CHI 2025</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cardx pub-card mb-3 pub-item" data-status="published">
+      <div class="row align-items-center">
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="pub-media">
+            <img class="pub-thumb" src="/asset/image/transparent.png" alt="Transparent Barriers thumbnail" loading="lazy" />
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="pub-title">Transparent Barriers</div>
+          <p class="pub-subtitle">Natural Language Access Control Policies for XR-Enhanced Everyday Objects</p>
+          <div class="pub-authors">Kentaro Taninaka, <span class="my-name">Rahul Jain</span>, Jingyu Shi, Kazunori Takashio, Karthik Ramani</div>
+          <div class="pub-actions">
+            <a class="btn btn-sm btn-outline-dark" href="https://dl.acm.org/doi/pdf/10.1145/3706598.3713656">
+              <i class="fas fa-file-pdf mr-1"></i> PDF
+            </a>
+            <span class="badge-venue">CHI 2025</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cardx pub-card mb-3 pub-item" data-status="published">
+      <div class="row align-items-center">
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="pub-media">
+            <img class="pub-thumb" src="/asset/image/causality2.png" alt="Causality in MR thumbnail" loading="lazy" />
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="pub-title">Causality in MR</div>
+          <p class="pub-subtitle">Visualizing Causality in Mixed Reality for Manual Task Learning: A Study</p>
+          <div class="pub-authors"><span class="my-name">Rahul Jain</span>*, Jingyu Shi*, Andrew Benton, Moiz Rasheed, Hyungjun Doh, Subramanian Chidambaram, Karthik Ramani</div>
+          <div class="pub-actions">
+            <a class="btn btn-sm btn-outline-dark" href="https://ieeexplore.ieee.org/abstract/document/10901853">
+              <i class="fas fa-file-pdf mr-1"></i> PDF
+            </a>
+            <span class="badge-venue">TVCG 2025</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cardx pub-card mb-3 pub-item" data-status="published">
+      <div class="row align-items-center">
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="pub-media">
+            <img class="pub-thumb" src="/asset/image/powervr.png" alt="PowVRtool thumbnail" loading="lazy" />
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="pub-title">PowVRtool</div>
+          <p class="pub-subtitle">A handheld haptic device for realistic power tool feedback in VR-based manufacturing training</p>
+          <div class="pub-authors">Mayank Patel, Asim Unmesh, Ananya Ipsita, Levi Erickson, Priyam Maheshwari, <span class="my-name">Rahul Jain</span>, Jingyu Shi, Laura H Blumenschein, Karthik Ramani</div>
+          <div class="pub-actions">
+            <a class="btn btn-sm btn-outline-dark" href="https://link.springer.com/article/10.1007/s10055-025-01258-2">
+              <i class="fas fa-file-pdf mr-1"></i> PDF
+            </a>
+            <span class="badge-venue">Virtual Reality 2025</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AR Storytelling (Fixed markup) -->
+    <div class="cardx pub-card mb-3 pub-item" data-status="published">
+      <div class="row align-items-center">
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="pub-media">
+            <img class="pub-thumb" src="/asset/image/storytelling.png" alt="AR Storytelling thumbnail" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="col-md-9">
+          <div class="pub-title">AR Storytelling</div>
+          <p class="pub-subtitle">An Exploratory Study on Multi-modal Generative AI in AR Storytelling</p>
+          <div class="pub-authors">
+            Hyungjun Doh*, Jingyu Shi*, <span class="my-name">Rahul Jain</span>*, Heesoo Kim, Karthik Ramani
+          </div>
+
+          <div class="pub-actions">
+            <a class="btn btn-sm btn-outline-dark" href="https://arxiv.org/pdf/2505.15973">
+              <i class="fas fa-file-pdf mr-1"></i> PDF
+            </a>
+            <span class="badge-venue">arXiv</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== 2024 ===================== -->
+    <h2 class="pub-year">2024</h2>
+
+    <div class="cardx pub-card mb-3 pub-item" data-status="published">
+      <div class="row align-items-center">
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="pub-media">
+            <img class="pub-thumb" src="/asset/image/RA-L_2023.png" alt="Interacting Objects thumbnail" loading="lazy" />
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="pub-title">Interacting Objects</div>
+          <p class="pub-subtitle">A Dataset of Object-Object Interactions for Richer Dynamic Scene Representations</p>
+          <div class="pub-authors">Asim Unmesh, <span class="my-name">Rahul Jain</span>, Jingyu Shi, V. K. Chaithanya Manam, Hyung-Gun Chi, Subramanian Chidambaram, Alexander Quinn, Karthik Ramani</div>
+          <div class="pub-actions">
+            <a class="btn btn-sm btn-outline-dark" href="https://ieeexplore.ieee.org/abstract/document/10316574">
+              <i class="fas fa-file-pdf mr-1"></i> PDF
+            </a>
+            <span class="badge-venue">RAL 2024</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cardx pub-card mb-3 pub-item" data-status="published">
+      <div class="row align-items-center">
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="pub-media">
+            <!-- NOTE: you had src="/asset/pdf/tt.png" which is odd; move image to /asset/image/ if possible -->
+            <img class="pub-thumb" src="/asset/pdf/tt.png" alt="Avattar thumbnail" loading="lazy" />
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="pub-title">Avattar</div>
+          <p class="pub-subtitle">Table tennis stroke training with embodied and detached visualization in augmented reality</p>
+          <div class="pub-authors">Dizhi Ma, Xiyun Hu, Jingyu Shi, Mayank Patel, <span class="my-name">Rahul Jain</span>, Ziyi Liu, Zhengzhe Zhu, Karthik Ramani</div>
+          <div class="pub-actions">
+            <a class="btn btn-sm btn-outline-dark" href="https://dl.acm.org/doi/pdf/10.1145/3654777.3676400">
+              <i class="fas fa-file-pdf mr-1"></i> PDF
+            </a>
+            <span class="badge-venue">UIST 2024</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cardx pub-card mb-3 pub-item" data-status="published">
+      <div class="row align-items-center">
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="pub-media">
+            <!-- NOTE: you had src="/asset/pdf/annotateXR.png"; move to /asset/image/ if possible -->
+            <img class="pub-thumb" src="/asset/pdf/annotateXR.png" alt="AnnotateXR thumbnail" loading="lazy" />
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="pub-title">AnnotateXR</div>
+          <p class="pub-subtitle">An extended reality workflow for automating data annotation to support computer vision applications</p>
+          <div class="pub-authors">Subramanian Chidambaram*, <span class="my-name">Rahul Jain</span>*, Sai Swarup Reddy, Asim Unmesh, Karthik Ramani</div>
+          <div class="pub-actions">
+            <a class="btn btn-sm btn-outline-dark" href="https://engineering.purdue.edu/cdesign/wp/wp-content/uploads/2024/11/jcise_24_12_121001.pdf">
+              <i class="fas fa-file-pdf mr-1"></i> PDF
+            </a>
+            <span class="badge-venue">JCISE 2024</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cardx pub-card mb-3 pub-item" data-status="published">
+      <div class="row align-items-center">
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="pub-media">
+            <img class="pub-thumb" src="/asset/image/coideator.png" alt="ConceptVis thumbnail" loading="lazy" />
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="pub-title">ConceptVis</div>
+          <p class="pub-subtitle">Generating and Exploring Design Concepts for Early-Stage Ideation Using Large Language Model</p>
+          <div class="pub-authors">Runlin Duan, Nachiketh Karthik, Jingyu Shi, <span class="my-name">Rahul Jain</span>, Maria C Yang, Karthik Ramani</div>
+          <div class="pub-actions">
+            <a class="btn btn-sm btn-outline-dark" href="https://asmedigitalcollection.asme.org/IDETC-CIE/proceedings-abstract/IDETC-CIE2024/88377/1208891">
+              <i class="fas fa-file-pdf mr-1"></i> PDF
+            </a>
+            <span class="badge-venue">IDETC/CIE 2024</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== 2023 and Onwards ===================== -->
+    <h2 class="pub-year">2023 and Onwards</h2>
+
+    <div class="cardx pub-card mb-3 pub-item" data-status="published">
+      <div class="row align-items-center">
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="pub-media">
+            <img class="pub-thumb" src="/asset/image/GenAI.png" alt="HCI Centric Survey thumbnail" loading="lazy" />
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="pub-title">HCI-Centric Survey</div>
+          <p class="pub-subtitle">An HCI-Centric Survey and Taxonomy of Human-Generative-AI Interactions</p>
+          <div class="pub-authors">Jingyu Shi*, <span class="my-name">Rahul Jain</span>*, Hyungjun Doh, Ryo Suzuki, Karthik Ramani</div>
+          <div class="pub-actions">
+            <a class="btn btn-sm btn-outline-dark" href="https://arxiv.org/pdf/2310.07127">
+              <i class="fas fa-file-pdf mr-1"></i> PDF
+            </a>
+            <span class="badge-venue">arXiv</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cardx pub-card mb-3 pub-item" data-status="published">
+      <div class="row align-items-center">
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="pub-media">
+            <img class="pub-thumb" src="/asset/image/UIST_Figures-1.png" alt="Ubi-TOUCH thumbnail" loading="lazy" />
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="pub-title">Ubi-TOUCH</div>
+          <p class="pub-subtitle">Ubiquitous Tangible Object Utilization through Consistent Hand-object interaction in Augmented Reality</p>
+          <div class="pub-authors"><span class="my-name">Rahul Jain</span>*, Jingyu Shi*, Runlin Duan, Zhengzhe Zhu, Xun Qian, Karthik Ramani</div>
+          <div class="pub-actions">
+            <a class="btn btn-sm btn-outline-dark" href="https://dl.acm.org/doi/pdf/10.1145/3654777.3676400">
+              <i class="fas fa-file-pdf mr-1"></i> PDF
+            </a>
+            <span class="badge-venue">UIST 2023</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cardx pub-card mb-3 pub-item" data-status="published">
+      <div class="row align-items-center">
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="pub-media">
+            <img class="pub-thumb" src="/asset/image/study_art.png" alt="GEN AI in ART thumbnail" loading="lazy" />
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="pub-title">Gen AI in Art</div>
+          <p class="pub-subtitle">Understanding generative AI in art: an interview study with artists on G-AI from an HCI perspective</p>
+          <div class="pub-authors">Jingyu Shi, <span class="my-name">Rahul Jain</span>, Runlin Duan, Karthik Ramani</div>
+          <div class="pub-actions">
+            <a class="btn btn-sm btn-outline-dark" href="https://arxiv.org/pdf/2310.13149">
+              <i class="fas fa-file-pdf mr-1"></i> PDF
+            </a>
+            <span class="badge-venue">arXiv</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    const search = document.getElementById("pubSearch");
+    const filter = document.getElementById("pubFilter");
+
+    function applyPubFilters() {
+      const q = (search.value || "").toLowerCase().trim();
+      const f = filter.value;
+
+      document.querySelectorAll(".pub-item").forEach(card => {
+        const status = card.getAttribute("data-status") || "published";
+        const text = card.innerText.toLowerCase();
+
+        const matchText = !q || text.includes(q);
+        const matchStatus = (f === "all") || (status === f);
+
+        card.style.display = (matchText && matchStatus) ? "" : "none";
+      });
+    }
+
+    if (search && filter) {
+      search.addEventListener("input", applyPubFilters);
+      filter.addEventListener("change", applyPubFilters);
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>Patents — Rahul Jain</title>
+  <meta name="description"
+    content="Rahul Jain — Patents. Issued and filed patents in XR, generative AI, and human-centered systems." />
+
+  <!-- Base CSS -->
+  <link rel="stylesheet" href="asset/css/bootstrap.css" />
+  <link rel="stylesheet" href="asset/css/all.css" />
+  <link rel="stylesheet" href="asset/css/style.css" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #FAF7F2;
+      --header: #F1ECE2;
+      --card: #FFFFFF;
+      --ink: #1A1A1A;
+      --muted: #5F5F5F;
+      --border: rgba(0,0,0,0.10);
+      --shadow: 0 10px 22px rgba(0,0,0,0.06);
+      --radius: 16px;
+      --accent: #0F766E;
+      --accentSoft: rgba(15,118,110,0.10);
+    }
+
+    html, body { height: 100%; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16.5px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Background animation (same as other pages) */
+    .bg-anim {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        radial-gradient(900px 600px at 15% 15%, rgba(15,118,110,.06), transparent 65%),
+        radial-gradient(800px 520px at 85% 25%, rgba(37,99,235,.05), transparent 65%),
+        radial-gradient(900px 620px at 30% 85%, rgba(124,45,18,.04), transparent 65%);
+      animation: bgFloat 22s ease-in-out infinite alternate;
+    }
+
+    @keyframes bgFloat {
+      0% { transform: translate(0,0) scale(1); }
+      100% { transform: translate(6px,-6px) scale(1.02); }
+    }
+
+    /* Page heading */
+    .page-title {
+      font-size: clamp(2.6rem, 4vw, 3.4rem);
+      margin: 1.8rem 0 .35rem;
+      text-align: center;
+    }
+
+    .page-subtitle {
+      text-align: center;
+      color: var(--muted);
+      font-weight: 600;
+      margin-bottom: 2.2rem;
+    }
+
+    /* Patent cards (image-free, authoritative) */
+    .patent-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.25rem;
+      transition: transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .patent-card:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 28px rgba(0,0,0,0.08);
+    }
+
+    .patent-title {
+      font-size: 1.12rem;
+      font-weight: 700;
+      margin-bottom: .35rem;
+      line-height: 1.45;
+    }
+
+    .patent-authors {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: .65rem;
+    }
+
+    .patent-actions {
+      display: flex;
+      gap: .6rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn-outline-dark {
+      border-radius: 12px;
+      font-weight: 800;
+      padding: .42rem .85rem;
+    }
+
+    .badge-status {
+      padding: .28rem .65rem;
+      border-radius: 999px;
+      font-size: .78rem;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      border: 1px solid rgba(0,0,0,0.15);
+      background: rgba(255,255,255,0.9);
+    }
+
+    .badge-accepted {
+      background: rgba(16,185,129,0.12);
+      border-color: rgba(16,185,129,0.35);
+    }
+
+    .badge-filed {
+      background: rgba(59,130,246,0.12);
+      border-color: rgba(59,130,246,0.35);
+    }
+
+    .badge-soon {
+      background: rgba(245,158,11,0.14);
+      border-color: rgba(245,158,11,0.45);
+    }
+
+    .container { max-width: 1080px; }
+  </style>
+</head>
+
+<body>
+  <div class="bg-anim" aria-hidden="true"></div>
+
+  <!-- Header / Nav -->
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-light">
+      <div class="container d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center">
+          <a class="text-dark mr-2" href="https://www.linkedin.com/in/rahul-purdue" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a class="text-dark mr-2" href="https://scholar.google.com/citations?user=n8woqvsAAAAJ&hl=en"
+            aria-label="Google Scholar">
+            <i class="fas fa-graduation-cap"></i>
+          </a>
+          <a class="text-dark mr-2" href="https://github.com/chabrarahul" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a class="text-dark" href="https://twitter.com/rahuljain151996" aria-label="Twitter/X">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link text-dark" href="index.html#top">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="index.html#pillars">Research</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link text-dark active" href="publication.html">Publications</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="index.html#patents">Patents</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="index.html#service">Service</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="asset/pdf/Resume_Rahul_final.pdf">CV</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- ===== END HEADER ===== -->
+
+  <main class="container my-5">
+    <h1 class="page-title">Patents</h1>
+    <p class="page-subtitle">
+      Issued and filed patents in extended reality, generative AI, and interactive systems
+    </p>
+
+    <!-- Patent 1 -->
+    <div class="patent-card">
+      <div class="patent-title">
+        Visualizing causality in mixed reality for manual task learning
+      </div>
+      <div class="patent-authors">
+        Karthik Ramani, Jingyu Shi, <strong>Rahul Jain</strong>
+      </div>
+      <div class="patent-actions">
+        <a class="btn btn-sm btn-outline-dark" href="https://patents.google.com/patent/US12444315B2/en">PDF</a>
+        <span class="badge-status badge-accepted">Accepted</span>
+      </div>
+    </div>
+
+    <!-- Patent 2 -->
+    <div class="patent-card">
+      <div class="patent-title">
+        System and method for authoring context-aware augmented reality instruction through generative artificial intelligence
+      </div>
+      <div class="patent-authors">
+        Karthik Ramani, Seunggeun Chi, Hyung-gun Chi, <strong>Rahul Jain</strong>, Jingyu Shi
+      </div>
+      <div class="patent-actions">
+        <a class="btn btn-sm btn-outline-dark" href="https://patents.google.com/patent/US20250238991A1/en">PDF</a>
+        <span class="badge-status badge-filed">Filed</span>
+      </div>
+    </div>
+
+    <!-- Patent 3 -->
+    <div class="patent-card">
+      <div class="patent-title">
+        Ubiquitous tangible object utilization through consistent hand-object interaction in augmented reality
+      </div>
+      <div class="patent-authors">
+        Karthik Ramani, Jingyu Shi, <strong>Rahul Jain</strong>
+      </div>
+      <div class="patent-actions">
+        <a class="btn btn-sm btn-outline-dark" href="https://patents.google.com/patent/US20250124671A1/en">PDF</a>
+        <span class="badge-status badge-filed">Filed</span>
+      </div>
+    </div>
+
+    <!-- Patent 4 -->
+    <div class="patent-card">
+      <div class="patent-title">
+        Generative Artificial Intelligence (AI)-Based Image Generation using Attribute-based Slider Controls
+      </div>
+      <div class="patent-authors">
+        <strong>Rahul Jain</strong>, Aakar Gupta, Koichiro Niinuma
+      </div>
+      <div class="patent-actions">
+        <span class="badge-status badge-filed">Filed</span>
+        <span class="badge-status badge-soon">Coming Soon</span>
+      </div>
+    </div>
+
+    <!-- Patent 5 -->
+    <div class="patent-card">
+      <div class="patent-title">
+        System and Method for Natural Language Access Control Policy for XR-Enhanced Everyday Objects
+      </div>
+      <div class="patent-authors">
+        Karthik Ramani, <strong>Rahul Jain</strong>, Kentaro Taninaka
+      </div>
+      <div class="patent-actions">
+        <span class="badge-status badge-filed">Filed</span>
+        <span class="badge-status badge-soon">Coming Soon</span>
+      </div>
+    </div>
+
+  </main>
+</body>
+</html>
