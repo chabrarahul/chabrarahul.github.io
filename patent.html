@@ -29,14 +29,19 @@
       --card: #FFFFFF;
       --ink: #1A1A1A;
       --muted: #5F5F5F;
-      --border: rgba(0,0,0,0.10);
-      --shadow: 0 10px 22px rgba(0,0,0,0.06);
+      --border: rgba(0, 0, 0, .08);
+      --shadow: 0 10px 22px rgba(0, 0, 0, .06);
       --radius: 16px;
+
       --accent: #0F766E;
-      --accentSoft: rgba(15,118,110,0.10);
+      --accentHover: #115E59;
+      --accentSoft: rgba(15, 118, 110, .10);
     }
 
-    html, body { height: 100%; }
+    html,
+    body {
+      height: 100%;
+    }
 
     body {
       background: var(--bg);
@@ -48,14 +53,45 @@
       -moz-osx-font-smoothing: grayscale;
     }
 
-    h1, h2, h3 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
       font-family: 'Playfair Display', Georgia, serif;
       font-weight: 900;
       letter-spacing: -0.02em;
     }
 
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--accentHover);
+      text-decoration: underline;
+    }
+
+    /* ✅ Header styles match Publications page */
+    .site-header {
+      background: var(--header);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-link {
+      font-weight: 700;
+    }
+
+    .nav-link.active {
+      color: var(--accent) !important;
+    }
+
+    /* Optional: keep icon links clean on hover */
+    .site-header a.text-dark:hover {
+      text-decoration: none;
+      opacity: .85;
+    }
 
     /* Background animation (same as other pages) */
     .bg-anim {
@@ -64,15 +100,32 @@
       z-index: -1;
       pointer-events: none;
       background:
-        radial-gradient(900px 600px at 15% 15%, rgba(15,118,110,.06), transparent 65%),
-        radial-gradient(800px 520px at 85% 25%, rgba(37,99,235,.05), transparent 65%),
-        radial-gradient(900px 620px at 30% 85%, rgba(124,45,18,.04), transparent 65%);
+        radial-gradient(900px 600px at 15% 15%, rgba(15, 118, 110, .06), transparent 65%),
+        radial-gradient(800px 520px at 85% 25%, rgba(37, 99, 235, .05), transparent 65%),
+        radial-gradient(900px 620px at 30% 85%, rgba(124, 45, 18, .04), transparent 65%);
       animation: bgFloat 22s ease-in-out infinite alternate;
+      transform: translateZ(0);
+      filter: saturate(1.03);
     }
 
     @keyframes bgFloat {
-      0% { transform: translate(0,0) scale(1); }
-      100% { transform: translate(6px,-6px) scale(1.02); }
+      0% {
+        transform: scale(1) translate(0, 0);
+      }
+
+      50% {
+        transform: scale(1.02) translate(-8px, 6px);
+      }
+
+      100% {
+        transform: scale(1.01) translate(8px, -5px);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .bg-anim {
+        animation: none;
+      }
     }
 
     /* Page heading */
@@ -80,6 +133,7 @@
       font-size: clamp(2.6rem, 4vw, 3.4rem);
       margin: 1.8rem 0 .35rem;
       text-align: center;
+      letter-spacing: -0.03em;
     }
 
     .page-subtitle {
@@ -103,20 +157,22 @@
 
     .patent-card:hover {
       transform: translateY(-1px);
-      box-shadow: 0 14px 28px rgba(0,0,0,0.08);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08);
     }
 
     .patent-title {
       font-size: 1.12rem;
-      font-weight: 700;
+      font-weight: 800;
       margin-bottom: .35rem;
       line-height: 1.45;
+      color: rgba(0, 0, 0, .92);
     }
 
     .patent-authors {
       color: var(--muted);
       font-size: 0.95rem;
       margin-bottom: .65rem;
+      font-weight: 600;
     }
 
     .patent-actions {
@@ -128,8 +184,17 @@
 
     .btn-outline-dark {
       border-radius: 12px;
-      font-weight: 800;
+      font-weight: 850;
       padding: .42rem .85rem;
+      border-color: rgba(26, 26, 26, .55);
+      color: var(--ink);
+      background: rgba(255, 255, 255, .85);
+    }
+
+    .btn-outline-dark:hover {
+      background: var(--ink);
+      border-color: var(--ink);
+      color: #fff;
     }
 
     .badge-status {
@@ -139,26 +204,28 @@
       font-weight: 850;
       text-transform: uppercase;
       letter-spacing: .06em;
-      border: 1px solid rgba(0,0,0,0.15);
-      background: rgba(255,255,255,0.9);
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      background: rgba(255, 255, 255, 0.9);
     }
 
     .badge-accepted {
-      background: rgba(16,185,129,0.12);
-      border-color: rgba(16,185,129,0.35);
+      background: rgba(16, 185, 129, 0.12);
+      border-color: rgba(16, 185, 129, 0.35);
     }
 
     .badge-filed {
-      background: rgba(59,130,246,0.12);
-      border-color: rgba(59,130,246,0.35);
+      background: rgba(59, 130, 246, 0.12);
+      border-color: rgba(59, 130, 246, 0.35);
     }
 
     .badge-soon {
-      background: rgba(245,158,11,0.14);
-      border-color: rgba(245,158,11,0.45);
+      background: rgba(245, 158, 11, 0.14);
+      border-color: rgba(245, 158, 11, 0.45);
     }
 
-    .container { max-width: 1080px; }
+    .container {
+      max-width: 1080px;
+    }
   </style>
 </head>
 
@@ -189,8 +256,8 @@
           <li class="nav-item"><a class="nav-link text-dark" href="index.html#top">Home</a></li>
           <li class="nav-item"><a class="nav-link text-dark" href="index.html#pillars">Research</a></li>
           <li class="nav-item"><a class="nav-link text-dark" href="projects.html">Projects</a></li>
-          <li class="nav-item"><a class="nav-link text-dark active" href="publication.html">Publications</a></li>
-          <li class="nav-item"><a class="nav-link text-dark" href="index.html#patents">Patents</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="publication.html">Publications</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="patent.html">Patents</a></li>
           <li class="nav-item"><a class="nav-link text-dark" href="index.html#service">Service</a></li>
           <li class="nav-item"><a class="nav-link text-dark" href="asset/pdf/Resume_Rahul_final.pdf">CV</a></li>
           <li class="nav-item"><a class="nav-link text-dark" href="index.html#contact">Contact</a></li>
@@ -278,4 +345,5 @@
 
   </main>
 </body>
+
 </html>
