@@ -138,11 +138,65 @@
         .links-row {
             display: flex; gap: 15px; border-top: 1px solid #f0f0f0; padding-top: 15px;
         }
+        .bottom-nav {
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid #e5e5e5; /* Subtle divider line */
+            display: flex;
+            gap: 40px;
+        }
 
+        .nav-item {
+            flex: 1;
+            text-decoration: none;
+            group: hover; /* For transition handling */
+        }
+
+        /* The Label (e.g. "Next Area") */
+        .nav-label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #999;
+            margin-bottom: 10px;
+            transition: color 0.2s ease;
+        }
+
+        /* The Main Heading Link */
+        .nav-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem; /* Large and clear */
+            color: #1a1a1a;
+            margin: 0;
+            line-height: 1.2;
+            transition: color 0.2s ease, transform 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Hover Effects */
+        .nav-item:hover .nav-heading {
+            color: #3b82f6; /* Your Blue Accent */
+            transform: translateX(5px); /* Subtle nudge to the right */
+        }
+
+        .nav-item:hover .nav-label {
+            color: #3b82f6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .bottom-nav { flex-direction: column; gap: 30px; }
+        }
         .text-link {
             font-size: 0.9rem; font-weight: 600; color: #1a1a1a;
         }
         .text-link:hover { color: #3b82f6; text-decoration: underline; }
+        .text-link.disabled { opacity: 0.4; cursor: default; pointer-events: none; text-decoration: none;}
+        .text-link.disabled:hover { color: var(--text-main); }
 
         /* RESPONSIVE */
         @media (max-width: 1000px) {
@@ -161,18 +215,18 @@
         <a href="index.html" class="back-link">&larr; Back to Home</a>
         
         <div class="category-video-container">
-            <video autoplay muted loop playsinline poster="asset/image/perception_poster.png">
-                <source src="asset/video/perception_loop.mp4" type="video/mp4">
-            </video>
+            <img src="asset/image/causality2.png" alt="Perception and Understanding Teaser" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
 
         <h1>Perception &<br>Understanding</h1>
-        
+
         <p class="mission-statement">
-            Decoding the physical world through machine eyes.
+            Decoding the world, not just labeling it.
         </p>
         <p class="secondary-text">
-            We move beyond simple classification. Our research focuses on <strong>temporal reasoning, physical causality, and open-vocabulary understanding</strong>, enabling machines to perceive human-object interactions with the same depth as we do.
+            Traditional computer vision asks, "What is in this image?" We ask, "What is happening, and why?"
+            <br><br>
+            Our research moves beyond static recognition to <strong>temporal and causal reasoning</strong>. By modeling long-form narratives and physical dynamics, we enable machines to perceive the chaotic real world with human-level depth.
         </p>
     </aside>
 
@@ -189,8 +243,7 @@
                     Exploring Vision-Language Models for Open-Vocabulary Zero-Shot Action Segmentation. We demonstrate how VLMs can decompose complex long-form videos into meaningful steps without prior training examples.
                 </p>
                 <div class="links-row">
-                    <a href="#" class="text-link">PDF &nearr;</a>
-                    <a href="#" class="text-link">Project Page &rarr;</a>
+                    <span href="#" class="text-link disabled">PDF &nearr;</span>
                 </div>
             </div>
         </article>
@@ -216,7 +269,7 @@
                 <img src="asset/image/RA-L_2023.png" alt="Interacting Objects Dataset" onerror="this.src='https://placehold.co/400x300?text=OOI+Dataset'">
             </div>
             <div class="card-content">
-                <div class="meta-row">RA-L 2023 / ICRA 2024</div>
+                <div class="meta-row">RA-L 2024 </div>
                 <h2>Interacting Objects Dataset</h2>
                 <p class="abstract">
                     A novel dataset and taxonomy for Object-Object Interactions (OOI). Unlike typical Hunch-Object datasets, we focus on the physical dynamics between objects themselves to enable richer scene understanding.
@@ -239,7 +292,7 @@
                     Narrative Aligned Long Form Video Question Answering. A method for grounding QA in the narrative structure of movies and long videos, improving reasoning over long temporal horizons.
                 </p>
                 <div class="links-row">
-                    <a href="#" class="text-link">PDF &nearr;</a>
+                    <span href="#" class="text-link disabled">PDF &nearr;</span>
                 </div>
             </div>
         </article>
@@ -259,6 +312,20 @@
                 </div>
             </div>
         </article>
+        <nav class="bottom-nav">
+        
+            <a href="interaction.html" class="nav-item">
+                <span class="nav-label">Explore Next</span>
+                <h3 class="nav-heading">Interaction & Generation &rarr;</h3>
+            </a>
+    
+            <a href="physical_constraints.html" class="nav-item">
+                <span class="nav-label">Explore Next</span>
+                <h3 class="nav-heading">Physical Reasoning &rarr;</h3>
+            </a>
+    
+        </nav>
+        
 
     </main>
 </div>

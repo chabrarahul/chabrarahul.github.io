@@ -143,6 +143,8 @@
             font-size: 0.9rem; font-weight: 600; color: #1a1a1a;
         }
         .text-link:hover { color: #3b82f6; text-decoration: underline; }
+        .text-link.disabled { opacity: 0.4; cursor: default; pointer-events: none; text-decoration: none;}
+        .text-link.disabled:hover { color: var(--text-main); }
 
         /* RESPONSIVE */
         @media (max-width: 1000px) {
@@ -150,6 +152,59 @@
             .sidebar { position: static; max-width: 100%; }
             .paper-card { flex-direction: column; }
             .card-thumb { height: 200px; flex: none; border-right: none; border-bottom: 1px solid #f0f0f0; }
+        }
+        .bottom-nav {
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid #e5e5e5; /* Subtle divider line */
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-item {
+            flex: 1;
+            text-decoration: none;
+            group: hover; /* For transition handling */
+        }
+
+        /* The Label (e.g. "Next Area") */
+        .nav-label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #999;
+            margin-bottom: 10px;
+            transition: color 0.2s ease;
+        }
+
+        /* The Main Heading Link */
+        .nav-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem; /* Large and clear */
+            color: #1a1a1a;
+            margin: 0;
+            line-height: 1.2;
+            transition: color 0.2s ease, transform 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Hover Effects */
+        .nav-item:hover .nav-heading {
+            color: #3b82f6; /* Your Blue Accent */
+            transform: translateX(5px); /* Subtle nudge to the right */
+        }
+
+        .nav-item:hover .nav-label {
+            color: #3b82f6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .bottom-nav { flex-direction: column; gap: 30px; }
         }
     </style>
 </head>
@@ -161,9 +216,7 @@
         <a href="index.html" class="back-link">&larr; Back to Home</a>
         
         <div class="category-video-container">
-            <video autoplay muted loop playsinline poster="asset/image/interaction_poster.png">
-                <source src="asset/video/interaction_loop.mp4" type="video/mp4">
-            </video>
+            <img src="asset/image/caring.png" alt="Perception and Understanding Teaser" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
 
         <h1>Interaction &<br>Generation</h1>
@@ -275,6 +328,19 @@
                 </div>
             </div>
         </article>
+        <nav class="bottom-nav">
+        
+            <a href="perception.html" class="nav-item">
+                <span class="nav-label">Explore Next</span>
+                <h3 class="nav-heading">Perception and Understanding &rarr;</h3>
+            </a>
+    
+            <a href="physical_constraints.html" class="nav-item">
+                <span class="nav-label">Explore Next</span>
+                <h3 class="nav-heading">Physical Reasoning &rarr;</h3>
+            </a>
+    
+        </nav>
 
     </main>
 </div>
