@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perception & Understanding | Rahul Jain</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* CORE RESET */
+        body { margin: 0; font-family: 'Inter', sans-serif; background-color: #f9f8f6; color: #1a1a1a; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; transition: all 0.2s; }
+        
+        /* PAGE CONTAINER */
+        .page-container {
+            display: flex;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 80px 40px;
+            gap: 80px;
+        }
+
+        /* --- LEFT SIDEBAR (Context) --- */
+        .sidebar {
+            flex: 1;
+            position: sticky;
+            top: 60px;
+            height: fit-content;
+            max-width: 380px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #888;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        .back-link:hover { color: #000; transform: translateX(-5px); }
+
+        /* Video Container */
+        .category-video-container {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background-color: #e0e0e0;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .category-video-container video {
+            width: 100%; height: 100%; object-fit: cover;
+        }
+
+        .sidebar h1 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 2.8rem; 
+            line-height: 1.1; 
+            margin-bottom: 20px; 
+            color: #111; 
+        }
+
+        /* Mission Statement tailored for Perception */
+        .mission-statement {
+            font-size: 1.15rem;
+            color: #444;
+            font-weight: 400;
+            border-left: 3px solid #3b82f6;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .secondary-text {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        /* --- RIGHT FEED --- */
+        .feed { flex: 1.8; display: flex; flex-direction: column; gap: 40px; }
+
+        /* VISUAL PAPER CARD */
+        .paper-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .paper-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+        }
+
+        /* Thumbnail - Uses 'contain' for diagrams */
+        .card-thumb {
+            flex: 0 0 280px;
+            background-color: #fff;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid rgba(0,0,0,0.04);
+        }
+        .card-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* CRITICAL for charts/diagrams */
+            padding: 20px;
+        }
+
+        .card-content { padding: 35px; flex: 1; }
+
+        .meta-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #3b82f6;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .paper-card h2 { 
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem; 
+            margin: 0 0 10px 0; 
+            line-height: 1.25; 
+        }
+
+        .abstract { font-size: 0.95rem; color: #555; margin-bottom: 20px; }
+
+        .links-row {
+            display: flex; gap: 15px; border-top: 1px solid #f0f0f0; padding-top: 15px;
+        }
+
+        .text-link {
+            font-size: 0.9rem; font-weight: 600; color: #1a1a1a;
+        }
+        .text-link:hover { color: #3b82f6; text-decoration: underline; }
+
+        /* RESPONSIVE */
+        @media (max-width: 1000px) {
+            .page-container { flex-direction: column; }
+            .sidebar { position: static; max-width: 100%; }
+            .paper-card { flex-direction: column; }
+            .card-thumb { height: 200px; flex: none; border-right: none; border-bottom: 1px solid #f0f0f0; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-container">
+    
+    <aside class="sidebar">
+        <a href="index.html" class="back-link">&larr; Back to Home</a>
+        
+        <div class="category-video-container">
+            <video autoplay muted loop playsinline poster="asset/image/perception_poster.png">
+                <source src="asset/video/perception_loop.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <h1>Perception &<br>Understanding</h1>
+        
+        <p class="mission-statement">
+            Decoding the physical world through machine eyes.
+        </p>
+        <p class="secondary-text">
+            We move beyond simple classification. Our research focuses on <strong>temporal reasoning, physical causality, and open-vocabulary understanding</strong>, enabling machines to perceive human-object interactions with the same depth as we do.
+        </p>
+    </aside>
+
+    <main class="feed">
+
+        <article class="paper-card">
+            <div class="card-thumb">
+                <img src="asset/image/ovtas_teaser.png" alt="OVTAS Diagram" onerror="this.src='https://placehold.co/400x300?text=OVTAS'">
+            </div>
+            <div class="card-content">
+                <div class="meta-row">ICRA 2026</div>
+                <h2>OVTAS: Zero-Shot Action Segmentation</h2>
+                <p class="abstract">
+                    Exploring Vision-Language Models for Open-Vocabulary Zero-Shot Action Segmentation. We demonstrate how VLMs can decompose complex long-form videos into meaningful steps without prior training examples.
+                </p>
+                <div class="links-row">
+                    <a href="#" class="text-link">PDF &nearr;</a>
+                    <a href="#" class="text-link">Project Page &rarr;</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="paper-card">
+            <div class="card-thumb">
+                <img src="asset/image/causality2.png" alt="Causality Graph" onerror="this.src='https://placehold.co/400x300?text=Causality'">
+            </div>
+            <div class="card-content">
+                <div class="meta-row">TVCG 2025</div>
+                <h2>Causality in Mixed Reality</h2>
+                <p class="abstract">
+                    Visualizing Causality in Mixed Reality for Manual Task Learning. A framework for identifying and visualizing the "why" behind physical actions, helping users understand task dependencies intuitively.
+                </p>
+                <div class="links-row">
+                    <a href="https://ieeexplore.ieee.org/abstract/document/10901853" class="text-link">PDF &nearr;</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="paper-card">
+            <div class="card-thumb">
+                <img src="asset/image/RA-L_2023.png" alt="Interacting Objects Dataset" onerror="this.src='https://placehold.co/400x300?text=OOI+Dataset'">
+            </div>
+            <div class="card-content">
+                <div class="meta-row">RA-L 2023 / ICRA 2024</div>
+                <h2>Interacting Objects Dataset</h2>
+                <p class="abstract">
+                    A novel dataset and taxonomy for Object-Object Interactions (OOI). Unlike typical Hunch-Object datasets, we focus on the physical dynamics between objects themselves to enable richer scene understanding.
+                </p>
+                <div class="links-row">
+                    <a href="https://ieeexplore.ieee.org/abstract/document/10316574" class="text-link">PDF &nearr;</a>
+                    <a href="#" class="text-link">Dataset &rarr;</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="paper-card">
+            <div class="card-thumb">
+                <img src="asset/image/NAVQA.png" alt="NA-VQA Framework" onerror="this.src='https://placehold.co/400x300?text=NA-VQA'">
+            </div>
+            <div class="card-content">
+                <div class="meta-row">Under Review</div>
+                <h2>NA-VQA: Narrative Aligned QA</h2>
+                <p class="abstract">
+                    Narrative Aligned Long Form Video Question Answering. A method for grounding QA in the narrative structure of movies and long videos, improving reasoning over long temporal horizons.
+                </p>
+                <div class="links-row">
+                    <a href="#" class="text-link">PDF &nearr;</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="paper-card">
+            <div class="card-thumb">
+                <img src="asset/pdf/annotateXR.png" alt="AnnotateXR Workflow" onerror="this.src='https://placehold.co/400x300?text=AnnotateXR'">
+            </div>
+            <div class="card-content">
+                <div class="meta-row">JCISE 2024</div>
+                <h2>AnnotateXR: Data for Vision</h2>
+                <p class="abstract">
+                    An extended reality workflow for automating data annotation. We allow researchers to collect and auto-label high-fidelity training data for computer vision by simply performing the task in XR.
+                </p>
+                <div class="links-row">
+                    <a href="https://engineering.purdue.edu/cdesign/wp/wp-content/uploads/2024/11/jcise_24_12_121001.pdf" class="text-link">PDF &nearr;</a>
+                </div>
+            </div>
+        </article>
+
+    </main>
+</div>
+
+</body>
+</html>

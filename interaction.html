@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaction & Generation | Rahul Jain</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* CORE RESET */
+        body { margin: 0; font-family: 'Inter', sans-serif; background-color: #f9f8f6; color: #1a1a1a; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; transition: all 0.2s; }
+        
+        /* PAGE CONTAINER */
+        .page-container {
+            display: flex;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 80px 40px;
+            gap: 80px;
+        }
+
+        /* --- LEFT SIDEBAR (Context) --- */
+        .sidebar {
+            flex: 1;
+            position: sticky;
+            top: 60px;
+            height: fit-content;
+            max-width: 380px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #888;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        .back-link:hover { color: #000; transform: translateX(-5px); }
+
+        /* Video Container */
+        .category-video-container {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background-color: #e0e0e0;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .category-video-container video {
+            width: 100%; height: 100%; object-fit: cover;
+        }
+
+        .sidebar h1 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 2.8rem; 
+            line-height: 1.1; 
+            margin-bottom: 20px; 
+            color: #111; 
+        }
+
+        /* Mission Statement tailored for Interaction */
+        .mission-statement {
+            font-size: 1.15rem;
+            color: #444;
+            font-weight: 400;
+            border-left: 3px solid #3b82f6;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .secondary-text {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        /* --- RIGHT FEED --- */
+        .feed { flex: 1.8; display: flex; flex-direction: column; gap: 40px; }
+
+        /* VISUAL PAPER CARD */
+        .paper-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .paper-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+        }
+
+        /* Thumbnail - Uses 'contain' for diagrams */
+        .card-thumb {
+            flex: 0 0 280px;
+            background-color: #fff;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid rgba(0,0,0,0.04);
+        }
+        .card-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Keeps diagrams perfectly visible */
+            padding: 20px;
+        }
+
+        .card-content { padding: 35px; flex: 1; }
+
+        .meta-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #3b82f6;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .paper-card h2 { 
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem; 
+            margin: 0 0 10px 0; 
+            line-height: 1.25; 
+        }
+
+        .abstract { font-size: 0.95rem; color: #555; margin-bottom: 20px; }
+
+        .links-row {
+            display: flex; gap: 15px; border-top: 1px solid #f0f0f0; padding-top: 15px;
+        }
+
+        .text-link {
+            font-size: 0.9rem; font-weight: 600; color: #1a1a1a;
+        }
+        .text-link:hover { color: #3b82f6; text-decoration: underline; }
+
+        /* RESPONSIVE */
+        @media (max-width: 1000px) {
+            .page-container { flex-direction: column; }
+            .sidebar { position: static; max-width: 100%; }
+            .paper-card { flex-direction: column; }
+            .card-thumb { height: 200px; flex: none; border-right: none; border-bottom: 1px solid #f0f0f0; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-container">
+    
+    <aside class="sidebar">
+        <a href="index.html" class="back-link">&larr; Back to Home</a>
+        
+        <div class="category-video-container">
+            <video autoplay muted loop playsinline poster="asset/image/interaction_poster.png">
+                <source src="asset/video/interaction_loop.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <h1>Interaction &<br>Generation</h1>
+        
+        <p class="mission-statement">
+            Bridging the gap between human intent and generative AI.
+        </p>
+        <p class="secondary-text">
+            We move beyond static prompts. Our research focuses on <strong>building systems where users can touch, shape, and guide AI</strong> in real-time. By combining Mixed Reality with Generative Models, we transform passive observation into active co-creation.
+        </p>
+    </aside>
+
+    <main class="feed">
+
+        <article class="paper-card">
+            <div class="card-thumb">
+                <img src="asset/image/caring.png" alt="CARING-AI Teaser" onerror="this.src='https://placehold.co/400x300?text=CARING-AI'">
+            </div>
+            <div class="card-content">
+                <div class="meta-row">CHI 2025</div>
+                <h2>CARING-AI: Context-aware AR</h2>
+                <p class="abstract">
+                    Towards Authoring Context-aware Augmented Reality Instruction through Generative AI. We enable systems to generate adaptive, visually grounded instructions based on the user's specific physical context.
+                </p>
+                <div class="links-row">
+                    <a href="https://arxiv.org/pdf/2501.16557" class="text-link">PDF &nearr;</a>
+                    <a href="#" class="text-link">Video &rtrif;</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="paper-card">
+            <div class="card-thumb">
+                <img src="asset/image/adaptive.png" alt="Adaptive Sliders" onerror="this.src='https://placehold.co/400x300?text=AdaptiveSliders'">
+            </div>
+            <div class="card-content">
+                <div class="meta-row">CHI 2025</div>
+                <h2>AdaptiveSliders: Semantic Editing</h2>
+                <p class="abstract">
+                    User-aligned Semantic Slider-based Editing of Text-to-Image Model Output. A framework for discovering interpretable directions in latent space, allowing users to fine-tune generative images with simple sliders.
+                </p>
+                <div class="links-row">
+                    <a href="https://dl.acm.org/doi/pdf/10.1145/3706598.3714292" class="text-link">PDF &nearr;</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="paper-card">
+            <div class="card-thumb">
+                <img src="asset/pdf/tt.png" alt="AvaTTAR Teaser" onerror="this.src='https://placehold.co/400x300?text=AvaTTAR'">
+            </div>
+            <div class="card-content">
+                <div class="meta-row">UIST 2024</div>
+                <h2>AvaTTAR: Table Tennis Training</h2>
+                <p class="abstract">
+                    Stroke training with embodied and detached visualization in Augmented Reality. We visualize stroke dynamics directly on the user's body to improve motor skill acquisition and spatial understanding.
+                </p>
+                <div class="links-row">
+                    <a href="https://dl.acm.org/doi/pdf/10.1145/3654777.3676400" class="text-link">PDF &nearr;</a>
+                    <a href="#" class="text-link">Project Page &rarr;</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="paper-card">
+            <div class="card-thumb">
+                <img src="asset/image/canvas3d.png" alt="CANVAS-3D" onerror="this.src='https://placehold.co/400x300?text=CANVAS-3D'">
+            </div>
+            <div class="card-content">
+                <div class="meta-row">IUI 2026</div>
+                <h2>CANVAS-3D: Spatial Control</h2>
+                <p class="abstract">
+                    Empowering Precise Spatial Control for Image Generation with Constraints from a 3D Virtual Canvas. Allowing users to use coarse 3D proxies to guide the composition and layout of generative 2D images.
+                </p>
+                <div class="links-row">
+                    <a href="https://arxiv.org/pdf/2508.07135" class="text-link">PDF &nearr;</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="paper-card">
+            <div class="card-thumb">
+                <img src="asset/image/transparent.png" alt="Transparent Barriers" onerror="this.src='https://placehold.co/400x300?text=XR+Access+Control'">
+            </div>
+            <div class="card-content">
+                <div class="meta-row">CHI 2025</div>
+                <h2>Transparent Barriers</h2>
+                <p class="abstract">
+                    Natural Language Access Control Policies for XR-Enhanced Everyday Objects. Using LLMs to interpret verbal commands and enforce spatial access policies in shared Mixed Reality environments.
+                </p>
+                <div class="links-row">
+                    <a href="https://dl.acm.org/doi/pdf/10.1145/3706598.3713656" class="text-link">PDF &nearr;</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="paper-card">
+            <div class="card-thumb">
+                <img src="asset/image/UIST_Figures-1.png" alt="Ubi-TOUCH" onerror="this.src='https://placehold.co/400x300?text=Ubi-TOUCH'">
+            </div>
+            <div class="card-content">
+                <div class="meta-row">UIST 2023</div>
+                <h2>Ubi-TOUCH</h2>
+                <p class="abstract">
+                    Ubiquitous Tangible Object Utilization through Consistent Hand-object interaction in AR. Opportunistically repurposing everyday physical objects as tangible proxies for virtual interactions.
+                </p>
+                <div class="links-row">
+                    <a href="https://dl.acm.org/doi/pdf/10.1145/3654777.3676400" class="text-link">PDF &nearr;</a>
+                </div>
+            </div>
+        </article>
+
+    </main>
+</div>
+
+</body>
+</html>
